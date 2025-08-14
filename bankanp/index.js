@@ -20,7 +20,7 @@ const app = express();
 const allowedOrigins = [
   "https://bankanp.up.railway.app",
   "https://bankanp-nine.vercel.app",
-  "https://app.rishackmoto.com",
+  "https://api.bankanp.com",
   "http://localhost:3000",
   "http://127.0.0.1:50747",
   "http://localhost:1234", // misal pakai Parcel
@@ -43,8 +43,12 @@ app.use(cors({
 app.use(express.json());
 
 // 🔁 Redirect vercel default domain ke custom domain (opsional)
-app.get('/', (req, res) => {
-  res.send('API Bank ANP aktif 🚀');
+app.use((req, res, next) => {
+  const host = req.headers.host;
+  if (host === 'bankanp-nine.vercel.app') {
+     return res.redirect(301, `https://api.bankanp.com${req.url}`);
+  }
+  next();
 });
 
 // 📌 Pasang semua route ke app
