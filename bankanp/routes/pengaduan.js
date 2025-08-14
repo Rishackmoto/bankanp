@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
   try {
     const { nama, no_hp, tanggal_pengaduan, jenis, deskripsi } = req.body;
     await db.query(`
-      INSERT INTO PengaduanNasabah (nama, no_hp, tanggal_pengaduan, jenis, deskripsi)
+      INSERT INTO PengaduanNasabah (nama, nohp, tgl, jenis, deskripsi)
       VALUES (@nama, @no_hp, @tanggal_pengaduan, @jenis, @deskripsi)
     `, { nama, no_hp, tanggal_pengaduan, jenis, deskripsi });
 

@@ -1,17 +1,14 @@
 const express = require('express');
-const cors = require('cors');
-
 const app = express();
+const pengaduanRoute = require('./routes/pengaduan');
 
-// Aktifkan CORS
-app.use(cors());
-
-// Parse JSON body
+// Middleware untuk parsing JSON
 app.use(express.json());
 
-const pengaduanRoute = require('./routes/pengaduan');
-app.use('/', pengaduanRoute);
+// Route utama
+app.use('/pengaduan', pengaduanRoute);
 
+// Listener Railway
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
