@@ -1,20 +1,6 @@
 const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
-
 const app = express();
-
-// Allowed origins
-const allowedOrigins = [
-  "https://bankanp.up.railway.app",
-  "https://bankanp-nine.vercel.app",
-  "http://localhost:3000",
-  "http://127.0.0.1:50747",
-  "http://localhost:1234",
-  "http://localhost:5173",
-  "http://localhost:4200",
-  "http://localhost:8080"
-];
+const cors = require('cors'); 
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -29,17 +15,33 @@ app.use(cors({
   credentials: true
 }));
 
-// Handle preflight
-app.options('*', cors());
-
-// Parse JSON
+// Middleware untuk parsing JSON
 app.use(express.json());
 
-// Import route
+require("dotenv").config();
+const { poolPromise } = require("./db");
+
+// 📦 Import semua route
 const pengaduanRoute = require('./routes/pengaduan');
+
+
+
+// ✅ Setup CORS yang benar
+const allowedOrigins = [
+  "https://bankanp.up.railway.app",
+  "https://bankanp-nine.vercel.app",
+  "http://localhost:3000",
+  "http://127.0.0.1:50747",
+  "http://localhost:1234", // misal pakai Parcel
+  "http://localhost:5173", // misal pakai Vite
+  "http://localhost:4200", // misal pakai Angular
+  "http://localhost:8080" 
+  ];
+
+// Route utama
 app.use('/pengaduan', pengaduanRoute);
 
-// Start server
+// Listener Railway
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
