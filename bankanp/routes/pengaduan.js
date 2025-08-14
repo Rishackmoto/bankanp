@@ -1,18 +1,22 @@
-// pengaduan.js
-router.post('/', async (req, res) => {
-  try {
-    const { nama, no_hp, tanggal_pengaduan, jenis, deskripsi } = req.body;
+// routes/pengaduan.js
+const express = require('express');
+const router = express.Router(); // <-- ini wajib
+const { poolPromise, sql } = require('../db'); // koneksi db
 
-    const pool = await db.poolPromise;
+router.post('/', async (req, res) => { // <-- sekarang route-nya '/'
+  try {
+    const { nama, nohp, tgl, jenis, deskripsi } = req.body;
+
+    const pool = await poolPromise;
     await pool.request()
-      .input('nama', db.sql.VarChar, nama)
-      .input('no_hp', db.sql.VarChar, no_hp)
-      .input('tanggal_pengaduan', db.sql.Date, tanggal_pengaduan)
-      .input('jenis', db.sql.VarChar, jenis)
-      .input('deskripsi', db.sql.Text, deskripsi)
+      .input('nama', sql.VarChar, nama)
+      .input('nohp', sql.VarChar, nohp)
+      .input('tgl', sql.Date, tgl)
+      .input('jenis', sql.VarChar, jenis)
+      .input('deskripsi', sql.VarChar, deskripsi)
       .query(`
         INSERT INTO PengaduanNasabah (nama, nohp, tgl, jenis, deskripsi)
-        VALUES (@nama, @no_hp, @tanggal_pengaduan, @jenis, @deskripsi)
+        VALUES (@nama, @nohp, @tgl, @jenis, @deskripsi)
       `);
 
     res.json({ success: true, message: 'Pengaduan berhasil dikirim' });
@@ -21,3 +25,5 @@ router.post('/', async (req, res) => {
     res.status(500).json({ success: false, message: 'Terjadi kesalahan server' });
   }
 });
+
+module.exports = router;
