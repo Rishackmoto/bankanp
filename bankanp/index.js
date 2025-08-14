@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 const cors = require('cors'); 
-app.use(cors({ origin: '*' }));
+app.use(cors({
+  origin: '*', // atau spesifik asal domain web kamu
+  methods: ['GET','POST'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json());
 require("dotenv").config();
 const { poolPromise } = require("./db");
