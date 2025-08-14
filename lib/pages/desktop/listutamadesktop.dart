@@ -483,7 +483,7 @@ class ListInformasi extends StatelessWidget {
                   },
                 );
               },
-              child: Row(
+              child: Column(
                 children: [
                   Image.asset('assets/images/pengaduan.png'),
                   const Text(
