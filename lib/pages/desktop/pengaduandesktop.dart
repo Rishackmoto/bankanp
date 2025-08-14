@@ -101,7 +101,6 @@ class _PengaduanNasabahDesktopState extends State<PengaduanNasabahDesktop> {
       appBar: AppBar(
         title: const Text('Form Pengaduan Nasabah'),
         centerTitle: true,
-        backgroundColor: Colors.blue.shade700,
       ),
       body: Center(
         child: Container(
