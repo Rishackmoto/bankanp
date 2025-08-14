@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+require("dotenv").config();
+const { poolPromise } = require("./db");
 
 // 📦 Import semua route
 const pengaduanRoute = require('./routes/pengaduan');
