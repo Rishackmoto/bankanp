@@ -48,7 +48,7 @@ class _PengaduanNasabahDesktopState extends State<PengaduanNasabahDesktop> {
     });
 
     try {
-      final url = Uri.parse('https://bankanp.up.railway.app/pengaduan');
+      final url = Uri.parse('https://api.bankanp.com/pengaduan');
 
       final response = await http.post(
         url,
