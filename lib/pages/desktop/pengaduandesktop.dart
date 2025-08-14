@@ -55,8 +55,8 @@ class _PengaduanNasabahDesktopState extends State<PengaduanNasabahDesktop> {
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'nama': namaController.text,
-          'nohp': nohpController.text,
-          'tgl': tglController.text
+          'no_hp': nohpController.text,
+          'tanggal_pengaduan': tglController.text
               .split('-')
               .reversed
               .join('-'), // dd-MM-yyyy → yyyy-MM-dd
