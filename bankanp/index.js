@@ -45,7 +45,7 @@ app.use(express.json());
 // 🔁 Redirect vercel default domain ke custom domain (opsional)
 app.use((req, res, next) => {
   const host = req.headers.host;
-  if (host === 'bankanp-nine.vercel.app') {
+  if (host === 'bankanp.com') {
      return res.redirect(301, `https://api.bankanp.com${req.url}`);
   }
   next();
