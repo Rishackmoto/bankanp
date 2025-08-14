@@ -1,0 +1,28 @@
+{
+  "name": "segoe-fonts-test",
+  "version": "1.0.0",
+  "description": "Test project -- Do not publish / use",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rimraf ./dist",
+    "test": "webpack && cp ./index.html ./dist/index.html && npm-run-all --parallel launch-server open-testsite",
+    "launch-server": "http-server ./dist",
+    "open-testsite": "opener http://localhost:8080"
+  },
+  "author": "Aquib Master",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "http-server": "^0.9.0",
+    "npm-run-all": "^3.1.0",
+    "opener": "^1.4.2",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "segoe-fonts": "^1.0.0"
+  }
+}

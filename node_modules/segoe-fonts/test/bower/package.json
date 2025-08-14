@@ -1,0 +1,24 @@
+{
+  "name": "segoe-fonts-bower-test",
+  "version": "1.0.0",
+  "dependencies": {
+    "opener": "~1.4.2",
+    "vinyl-fs": "~2.4.3",
+    "wiredep": "~4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js && opener ./index.html",
+    "install": "bower uninstall segoe-fonts --save && bower cache clean && bower install ../../#develop --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aquibm/segoe-fonts.git"
+  },
+  "author": "Aquib Master",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aquibm/segoe-fonts/issues"
+  },
+  "homepage": "https://github.com/aquibm/segoe-fonts#readme"
+}
