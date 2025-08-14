@@ -6,7 +6,7 @@ const pengaduanRoute = require('./routes/pengaduan');
 app.use(express.json());
 
 // Route utama
-app.use('/pengaduan', pengaduanRoute);
+app.use('/routes/pengaduan', pengaduanRoute);
 
 // Listener Railway
 const PORT = process.env.PORT || 3000;
