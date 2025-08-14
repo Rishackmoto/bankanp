@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 
-router.post('/', async (req, res) => {
+router.post('/pengaduan', async (req, res) => {
   try {
     const { nama, no_hp, tanggal_pengaduan, jenis, deskripsi } = req.body;
     await db.query(`
