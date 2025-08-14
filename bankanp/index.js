@@ -1,15 +1,32 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const app = express();
-const pengaduanRoute = require('./routes/pengaduan');
+app.use(cors());
+app.use(bodyParser.json());
 
-// Middleware untuk parsing JSON
-app.use(express.json());
+// ROUTE PENGADUAN
+app.post('/pengaduan', (req, res) => {
+    const { nama, email, pesan } = req.body;
 
-// Route utama
-app.use('/routes/pengaduan', pengaduanRoute);
+    if (!nama || !email || !pesan) {
+        return res.status(400).json({
+            status: 'error',
+            message: 'Nama, email, dan pesan wajib diisi'
+        });
+    }
 
-// Listener Railway
+    console.log('Pengaduan baru:', { nama, email, pesan });
+
+    res.json({
+        status: 'success',
+        message: 'Pengaduan berhasil dikirim'
+    });
+});
+
+// PORT
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
