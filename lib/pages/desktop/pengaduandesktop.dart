@@ -1,5 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart'; // Tambahkan di pubspec.yaml
+import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 
 class PengaduanNasabahDesktop extends StatefulWidget {
   const PengaduanNasabahDesktop({super.key});
@@ -11,7 +13,6 @@ class PengaduanNasabahDesktop extends StatefulWidget {
 
 class _PengaduanNasabahDesktopState extends State<PengaduanNasabahDesktop> {
   final TextEditingController namaController = TextEditingController();
-  final TextEditingController norekController = TextEditingController();
   final TextEditingController nohpController = TextEditingController();
   final TextEditingController deskripsiController = TextEditingController();
   final TextEditingController tglController = TextEditingController();
@@ -28,6 +29,69 @@ class _PengaduanNasabahDesktopState extends State<PengaduanNasabahDesktop> {
     'Kredit Konsumtif',
     'Lainnya'
   ];
+
+  bool loading = false;
+
+  Future<void> kirimPengaduan() async {
+    if (namaController.text.isEmpty ||
+        nohpController.text.isEmpty ||
+        tglController.text.isEmpty ||
+        deskripsiController.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Harap isi semua field')),
+      );
+      return;
+    }
+
+    setState(() {
+      loading = true;
+    });
+
+    try {
+      final url = Uri.parse('https://ayam-api.up.railway.app/pengaduan');
+
+      final response = await http.post(
+        url,
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode({
+          'nama': namaController.text,
+          'nohp': nohpController.text,
+          'tgl': tglController.text
+              .split('-')
+              .reversed
+              .join('-'), // dd-MM-yyyy → yyyy-MM-dd
+          'jenis': selectedJenis,
+          'deskripsi': deskripsiController.text,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Pengaduan berhasil dikirim')),
+        );
+        // Bersihkan form
+        namaController.clear();
+        nohpController.clear();
+        tglController.clear();
+        deskripsiController.clear();
+        setState(() {
+          selectedJenis = 'Layanan';
+        });
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Gagal kirim: ${response.body}')),
+        );
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Error: $e')),
+      );
+    }
+
+    setState(() {
+      loading = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -138,17 +202,16 @@ class _PengaduanNasabahDesktopState extends State<PengaduanNasabahDesktop> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton.icon(
-                  onPressed: () {
-                    print('--- PENGADUAN DIKIRIM ---');
-                    print('Nama: ${namaController.text}');
-                    print('No Rek: ${norekController.text}');
-                    print('No HP: ${nohpController.text}');
-                    print('Tgl: ${tglController.text}');
-                    print('Jenis: $selectedJenis');
-                    print('Deskripsi: ${deskripsiController.text}');
-                  },
-                  icon: const Icon(Icons.send),
-                  label: const Text('Kirim Pengaduan'),
+                  onPressed: loading ? null : kirimPengaduan,
+                  icon: loading
+                      ? const SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: CircularProgressIndicator(
+                              strokeWidth: 2, color: Colors.white),
+                        )
+                      : const Icon(Icons.send),
+                  label: Text(loading ? 'Mengirim...' : 'Kirim Pengaduan'),
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     backgroundColor: Colors.blue,
