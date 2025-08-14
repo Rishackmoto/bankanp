@@ -1,20 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../db'); // sesuaikan dengan koneksi kamu
+const db = require('../db');
 
-router.post('/pengaduan', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { nama, no_hp, tanggal_pengaduan, jenis, deskripsi } = req.body;
     await db.query(`
-      INSERT INTO PengaduanNasabah (nama,  no_hp, tanggal_pengaduan, jenis, deskripsi)
+      INSERT INTO PengaduanNasabah (nama, no_hp, tanggal_pengaduan, jenis, deskripsi)
       VALUES (@nama, @no_hp, @tanggal_pengaduan, @jenis, @deskripsi)
-    `, {
-      nama,
-      no_hp,
-      tanggal_pengaduan,
-      jenis,
-      deskripsi
-    });
+    `, { nama, no_hp, tanggal_pengaduan, jenis, deskripsi });
+
     res.json({ success: true, message: 'Pengaduan berhasil dikirim' });
   } catch (err) {
     console.error(err);
