@@ -24,8 +24,6 @@ const { poolPromise } = require("./db");
 // 📦 Import semua route
 const pengaduanRoute = require('./routes/pengaduan');
 
-
-
 // ✅ Setup CORS yang benar
 const allowedOrigins = [
   "https://bankanp.up.railway.app",
@@ -41,12 +39,14 @@ const allowedOrigins = [
 // Route utama
 app.use('/pengaduan', pengaduanRoute);
 
+// 🩺 Route root untuk cek server aktif
+app.get('/', (req, res) => {
+  res.send('API Bank ANP aktif 🚀');
+});
+
 // Listener Railway
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-app.get('/', (req, res) => {
-  res.send('API Bank ANP aktif 🚀');
-});
