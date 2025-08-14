@@ -1,63 +1,66 @@
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
-const { poolPromise } = require("./db");
-
-// 🔍 Log environment variable untuk debugging
-console.log('DB_USER:', process.env.DB_USER);
-console.log('DB_PASSWORD:', process.env.DB_PASSWORD ? '***' : 'Not Set');
-console.log('DB_SERVER:', process.env.DB_SERVER);
-console.log('DB_DATABASE:', process.env.DB_DATABASE);
-console.log('DB_PORT:', process.env.DB_PORT);
-console.log('API_BASE_URL:', process.env.API_BASE_URL);
-
-// 📦 Import semua route
-const authRoutes = require('./routes/auth');
-const pengaduanRoutes = require('./routes/pengaduan'); 
-
+const express = require('express');
+const cors = require('cors');
+const sql = require('mssql');
+require('dotenv').config();
 
 const app = express();
+const port = process.env.PORT || 3000;
 
-// ✅ Setup CORS yang benar
-const allowedOrigins = [
-  "https://bankanp.up.railway.app",
-  "https://bankanp-nine.vercel.app",
-  "https://app.bankanp.com",
-  "http://localhost:3000",
-  "http://127.0.0.1:50747",
-  "http://localhost:1234", // misal pakai Parcel
-  "http://localhost:5173", // misal pakai Vite
-  "http://localhost:4200", // misal pakai Angular
-  "http://localhost:8080" 
-  ];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS: " + origin));
-    }
-  },
-  credentials: true
-}));
-
+// Middleware
+app.use(cors());
 app.use(express.json());
 
-// 🔁 Redirect vercel default domain ke custom domain (opsional)
-app.use((req, res, next) => {
-  const host = req.headers.host;
-  if (host === 'ayam-api-nine.vercel.app') {
-     return res.redirect(301, `https://app.rishackmoto.com${req.url}`);
+// Koneksi SQL Server
+const dbConfig = {
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  server: process.env.DB_SERVER, // contoh: '192.168.1.10'
+  database: process.env.DB_NAME,
+  options: {
+    encrypt: true, // true kalau Azure / false kalau server lokal
+    trustServerCertificate: true
   }
-  next();
+};
+
+// Test koneksi database
+sql.connect(dbConfig)
+  .then(() => console.log('✅ Koneksi SQL Server berhasil'))
+  .catch(err => console.error('❌ Koneksi gagal:', err));
+
+// API root
+app.get('/', (req, res) => {
+  res.send('API AYAM is running...');
 });
 
-// 📌 Pasang semua route ke app
-app.use('/pengaduan', pengaduanRoutes);
+// API untuk simpan pengaduan
+app.post('/pengaduan', async (req, res) => {
+  const { nama, nohp, tgl, jenis, deskripsi } = req.body;
 
-// 🚀 Jalankan server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  if (!nama || !nohp || !tgl || !jenis || !deskripsi) {
+    return res.status(400).json({ message: 'Semua field wajib diisi' });
+  }
+
+  try {
+    const pool = await sql.connect(dbConfig);
+    await pool.request()
+      .input('nama', sql.NVarChar, nama)
+      .input('nohp', sql.NVarChar, nohp)
+      .input('tgl', sql.Date, tgl)
+      .input('jenis', sql.NVarChar, jenis)
+      .input('deskripsi', sql.NVarChar, deskripsi)
+      .query(`
+        INSERT INTO PengaduanNasabah (nama, nohp, tgl, jenis, deskripsi)
+        VALUES (@nama, @nohp, @tgl, @jenis, @deskripsi)
+      `);
+
+    res.json({ message: 'Pengaduan berhasil disimpan' });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Gagal simpan pengaduan', error: err.message });
+  }
+});
+
+// Jalankan server
+app.listen(port, () => {
+  console.log(`🚀 Server berjalan di port ${port}`);
 });
