@@ -31,6 +31,9 @@ const allowedOrigins = [
   ];
 
 app.use(cors({
+  origin: ['https://bankanp.com', 'https://www.bankanp.com'],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
