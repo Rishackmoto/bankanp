@@ -3,7 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 const { poolPromise } = require("./db");
 
-// 🔍 Log environment variable untuk debugging
+// 🔍 Debug env
 console.log('DB_USER:', process.env.DB_USER);
 console.log('DB_PASSWORD:', process.env.DB_PASSWORD ? '***' : 'Not Set');
 console.log('DB_SERVER:', process.env.DB_SERVER);
@@ -11,29 +11,27 @@ console.log('DB_DATABASE:', process.env.DB_DATABASE);
 console.log('DB_PORT:', process.env.DB_PORT);
 console.log('API_BASE_URL:', process.env.API_BASE_URL);
 
-// 📦 Import semua route
+// 📦 Import route
 const pengaduanRoute = require('./routes/pengaduan');
 
 const app = express();
 
-// ✅ Setup CORS yang benar
+// ✅ Allowed origins
 const allowedOrigins = [
   "https://bankanp.up.railway.app",
   "https://bankanp-nine.vercel.app",
-   "https://bankanp.com",
+  "https://bankanp.com",
+  "https://www.bankanp.com",
   "https://api.bankanp.com",
   "http://localhost:3000",
   "http://127.0.0.1:50747",
-  "http://localhost:1234", // misal pakai Parcel
-  "http://localhost:5173", // misal pakai Vite
-  "http://localhost:4200", // misal pakai Angular
-  "http://localhost:8080" 
-  ];
+  "http://localhost:1234",
+  "http://localhost:5173",
+  "http://localhost:4200",
+  "http://localhost:8080"
+];
 
 app.use(cors({
-  origin: ['https://bankanp.com', 'https://www.bankanp.com'],
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
@@ -41,12 +39,14 @@ app.use(cors({
       callback(new Error("Not allowed by CORS: " + origin));
     }
   },
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
 
 app.use(express.json());
 
-// 🔁 Redirect vercel default domain ke custom domain (opsional)
+// 🔁 Redirect domain utama ke API
 app.use((req, res, next) => {
   const host = req.headers.host;
   if (host === 'bankanp.com') {
@@ -55,11 +55,10 @@ app.use((req, res, next) => {
   next();
 });
 
-// 📌 Pasang semua route ke app
+// 📌 Pasang route
 app.use('/pengaduan', pengaduanRoute);
 
-
-// 🚀 Jalankan server
+// 🚀 Listener
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
