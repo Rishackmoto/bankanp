@@ -20,6 +20,7 @@ const app = express();
 const allowedOrigins = [
   "https://bankanp.up.railway.app",
   "https://bankanp-nine.vercel.app",
+   "https://bankanp.com",
   "https://api.bankanp.com",
   "http://localhost:3000",
   "http://127.0.0.1:50747",
