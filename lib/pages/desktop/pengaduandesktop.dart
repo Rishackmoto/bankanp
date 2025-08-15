@@ -1,7 +1,10 @@
 import 'dart:convert';
+import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
+import 'package:website/pages/footerresponsive.dart';
+import 'package:website/pages/responsivenavbar.dart';
 
 class PengaduanNasabahDesktop extends StatefulWidget {
   const PengaduanNasabahDesktop({super.key});
@@ -95,130 +98,174 @@ class _PengaduanNasabahDesktopState extends State<PengaduanNasabahDesktop> {
 
   @override
   Widget build(BuildContext context) {
-    bool isMobile = MediaQuery.of(context).size.width < 600;
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Form Pengaduan Nasabah'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          width: isMobile ? double.infinity : 600,
-          child: ListView(
-            children: [
-              const Text(
-                'Silakan isi form berikut untuk menyampaikan pengaduan Anda:',
-                style: TextStyle(fontSize: 16),
-              ),
-              const SizedBox(height: 20),
-
-              // Nama
-              TextField(
-                controller: namaController,
-                decoration: const InputDecoration(
-                  labelText: 'Nama Lengkap',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 15),
-
-              // Nomor HP
-              TextField(
-                controller: nohpController,
-                keyboardType: TextInputType.phone,
-                decoration: const InputDecoration(
-                  labelText: 'Nomor HP',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 15),
-
-              // Tanggal Pengaduan
-              TextField(
-                controller: tglController,
-                readOnly: true,
-                onTap: () async {
-                  DateTime? picked = await showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime(2020),
-                    lastDate: DateTime(2100),
-                  );
-                  if (picked != null) {
-                    String formattedDate =
-                        DateFormat('dd-MM-yyyy').format(picked);
-                    setState(() {
-                      tglController.text = formattedDate;
-                    });
-                  }
-                },
-                decoration: const InputDecoration(
-                  labelText: 'Tanggal Pengaduan',
-                  border: OutlineInputBorder(),
-                  suffixIcon: Icon(Icons.calendar_today),
-                ),
-              ),
-              const SizedBox(height: 15),
-
-              // Jenis Pengaduan
-              DropdownButtonFormField<String>(
-                value: selectedJenis,
-                items: jenisList
-                    .map((jenis) => DropdownMenuItem(
-                          value: jenis,
-                          child: Text(jenis),
-                        ))
-                    .toList(),
-                onChanged: (value) {
-                  if (value != null) {
-                    setState(() {
-                      selectedJenis = value;
-                    });
-                  }
-                },
-                decoration: const InputDecoration(
-                  labelText: 'Jenis Pengaduan',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 15),
-
-              // Deskripsi
-              TextField(
-                controller: deskripsiController,
-                maxLines: 5,
-                decoration: const InputDecoration(
-                  labelText: 'Deskripsi Pengaduan',
-                  alignLabelWithHint: true,
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 25),
-
-              // Tombol Kirim
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton.icon(
-                  onPressed: loading ? null : kirimPengaduan,
-                  icon: loading
-                      ? const SizedBox(
-                          height: 20,
-                          width: 20,
-                          child: CircularProgressIndicator(
-                              strokeWidth: 2, color: Colors.white),
-                        )
-                      : const Icon(Icons.send),
-                  label: Text(loading ? 'Mengirim...' : 'Kirim Pengaduan'),
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    backgroundColor: Colors.blue,
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(80), child: ResponsiveNavbar()),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const SizedBox(
+              height: 100,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: SizedBox(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'Kami Mendengar, Kami Peduli 💙',
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold),
+                            ),
+                            const Text(
+                              textAlign: TextAlign.justify,
+                              'Suara Anda sangat berarti bagi kami.Laporkan kendala atau keluhan Anda di sini, dan tim kami siap membantu menemukan solusi terbaik untuk Anda.',
+                            ),
+                            Lottie.asset('assets/lottie/complaint.json',
+                                height: MediaQuery.sizeOf(context).height / 2),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 100),
+                    child: Column(
+                      children: [
+                        const Text(
+                          'Silakan isi form berikut untuk menyampaikan pengaduan Anda:',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        const SizedBox(height: 20),
+
+                        // Nama
+                        TextField(
+                          controller: namaController,
+                          decoration: const InputDecoration(
+                            labelText: 'Nama Lengkap',
+                            border: OutlineInputBorder(),
+                          ),
+                        ),
+                        const SizedBox(height: 15),
+
+                        // Nomor HP
+                        TextField(
+                          controller: nohpController,
+                          keyboardType: TextInputType.phone,
+                          decoration: const InputDecoration(
+                            labelText: 'Nomor HP',
+                            border: OutlineInputBorder(),
+                          ),
+                        ),
+                        const SizedBox(height: 15),
+
+                        // Tanggal Pengaduan
+                        TextField(
+                          controller: tglController,
+                          readOnly: true,
+                          onTap: () async {
+                            DateTime? picked = await showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(2020),
+                              lastDate: DateTime(2100),
+                            );
+                            if (picked != null) {
+                              String formattedDate =
+                                  DateFormat('dd-MM-yyyy').format(picked);
+                              setState(() {
+                                tglController.text = formattedDate;
+                              });
+                            }
+                          },
+                          decoration: const InputDecoration(
+                            labelText: 'Tanggal Pengaduan',
+                            border: OutlineInputBorder(),
+                            suffixIcon: Icon(Icons.calendar_today),
+                          ),
+                        ),
+                        const SizedBox(height: 15),
+
+                        // Jenis Pengaduan
+                        DropdownButtonFormField<String>(
+                          value: selectedJenis,
+                          items: jenisList
+                              .map((jenis) => DropdownMenuItem(
+                                    value: jenis,
+                                    child: Text(jenis),
+                                  ))
+                              .toList(),
+                          onChanged: (value) {
+                            if (value != null) {
+                              setState(() {
+                                selectedJenis = value;
+                              });
+                            }
+                          },
+                          decoration: const InputDecoration(
+                            labelText: 'Jenis Pengaduan',
+                            border: OutlineInputBorder(),
+                          ),
+                        ),
+                        const SizedBox(height: 15),
+
+                        // Deskripsi
+                        TextField(
+                          controller: deskripsiController,
+                          maxLines: 5,
+                          decoration: const InputDecoration(
+                            labelText: 'Deskripsi Pengaduan',
+                            alignLabelWithHint: true,
+                            border: OutlineInputBorder(),
+                          ),
+                        ),
+                        const SizedBox(height: 25),
+
+                        // Tombol Kirim
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton.icon(
+                            onPressed: loading ? null : kirimPengaduan,
+                            icon: loading
+                                ? const SizedBox(
+                                    height: 20,
+                                    width: 20,
+                                    child: CircularProgressIndicator(
+                                        strokeWidth: 2, color: Colors.white),
+                                  )
+                                : const Icon(Icons.send, color: Colors.white),
+                            label: Text(
+                              loading ? 'Mengirim...' : 'Kirim Pengaduan',
+                              style: const TextStyle(color: Colors.white),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(vertical: 16),
+                              backgroundColor: Colors.blue,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 70,
+            ),
+            const FooterResponsive()
+          ],
         ),
       ),
     );
