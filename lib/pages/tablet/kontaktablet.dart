@@ -61,126 +61,105 @@ class KontakTablet extends StatelessWidget {
               ),
             ],
           ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Expanded(
-                  flex: 1,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '📍 Kantor Pusat:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'Jl. Frans kaisepo Blok C No. 7 Ruko Pasific Permai,Kota Jayapura - Papua',
-                      ),
-                      Text(
-                        '📞 Telepon:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        '(0967) 51611933 / 6161668), Hp. : 082317739026',
-                      ),
-                      Text(
-                        '📧 Email Layanan Nasabah:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'kp.jayapura@bankanp.com',
-                      ),
-                      Text(
-                        '🌐 Website Resmi:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'www.bankanp.com',
-                      ),
-                      Text(
-                        '🕒 Jam Operasional:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'Senin – Jumat: 08.00 – 17.00 WIT',
-                      ),
-                    ],
-                  ),
-                ),
+              Text(
+                '📍 Kantor Pusat:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'Jl. Frans kaisepo Blok C No. 7 Ruko Pasific Permai,Kota Jayapura - Papua',
               ),
               SizedBox(
-                width: 20,
+                height: 10,
               ),
-              Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Expanded(
-                  flex: 2,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '📍 Kantor Cabang Merauke:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'Jl. Raya Mandala Muli No. 90, Samping Kantor BPJS Ketenagakerjaan, Kota Merauke - Papua Selatan',
-                      ),
-                      Text(
-                        '📞 Telepon:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'Hp : 0821 9911 6191',
-                      ),
-                      Text(
-                        '📧 Email Layanan Nasabah:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'kp.merauke@bankanp.com',
-                      ),
-                      Text(
-                        '🌐 Website Resmi:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'www.bankanp.com',
-                      ),
-                      Text(
-                        '🕒 Jam Operasional:',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        textAlign: TextAlign.justify,
-                        'Senin – Jumat: 08.00 – 17.00 WIT',
-                      ),
-                    ],
-                  ),
-                ),
-              )
+              Text(
+                '📞 Telepon:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'Hp. : 082317739026',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                '📧 Email Layanan Nasabah:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'kp.jayapura@bankanp.com',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                '🌐 Website Resmi:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'www.bankanp.com',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                '🕒 Jam Operasional:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'Senin – Jumat: 08.00 – 17.00 WIT',
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                '📍 Kantor Cabang Merauke:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'Jl. Raya Mandala Muli No. 90, Samping Kantor BPJS Ketenagakerjaan, Kota Merauke - Papua Selatan',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                '📞 Telepon:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'Hp : 0821 9911 6191',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                '📧 Email Layanan Nasabah:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'kp.merauke@bankanp.com',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                '🕒 Jam Operasional:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text(
+                textAlign: TextAlign.justify,
+                'Senin – Jumat: 08.00 – 17.00 WIT',
+              ),
             ],
           ),
           const SizedBox(

@@ -1,100 +1,81 @@
 import 'package:flutter/material.dart';
 import 'package:website/main.dart';
-
-import 'package:website/pages/desktop/tentangdesktop.dart';
+import 'package:website/pages/tablet/homeiklanpenjualantablet.dart';
+import 'package:website/pages/tablet/kontaktablet.dart';
+import 'package:website/pages/tablet/laporantablet.dart';
+import 'package:website/pages/tablet/pengaduantablet.dart';
+import 'package:website/pages/tablet/tentangtablet.dart';
 
 class NavbarTablet extends StatelessWidget {
   const NavbarTablet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/ornamen.png'),
-              fit: BoxFit.cover,
-              opacity: 0.6),
-          color: Color(0xFF122F56)),
-      height: 100,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          InkWell(
-            child: Image.asset(
-              'assets/images/anp_white.png',
-            ),
-            onTap: () {
+    return AppBar(
+      flexibleSpace: const Image(
+        image: AssetImage('assets/images/ornamen.png'),
+        fit: BoxFit.cover,
+      ),
+      backgroundColor: const Color(0xFF122F56),
+      foregroundColor: Colors.white,
+      title: InkWell(
+        child: Image.asset(
+          'assets/images/anp_white.png',
+          scale: 9,
+        ),
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HomePage(),
+              ));
+        },
+      ),
+      actions: [
+        PopupMenuButton<String>(
+          icon: const Icon(Icons.menu, color: Colors.white),
+          onSelected: (value) {
+            // Tambahkan navigasi sesuai pilihan
+            if (value == 'Tentang') {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                  ));
-            },
-          ),
-          Row(
-            children: [
-              HoverText(
-                label: 'Tentang kami',
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const TentangDesktop(),
-                      ));
-                },
-              ),
-              const SizedBox(width: 20),
-              const HoverText(label: 'Produk dan Layanan'),
-              const SizedBox(width: 20),
-              const HoverText(label: 'Laporan'),
-              const SizedBox(width: 20),
-              const HoverText(label: 'Berita dan Informasi'),
-              const SizedBox(width: 20),
-              const HoverText(label: 'Pengaduan'),
-              const SizedBox(width: 20),
-              const HoverText(label: 'Kontak kami'),
-              const SizedBox(width: 20),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class HoverText extends StatefulWidget {
-  final String label;
-  final VoidCallback? onTap;
-  const HoverText({super.key, required this.label, this.onTap});
-
-  @override
-  State<HoverText> createState() => _HoverTextState();
-}
-
-class _HoverTextState extends State<HoverText> {
-  bool _isHovering = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => _isHovering = true),
-      onExit: (_) => setState(() => _isHovering = false),
-      cursor: SystemMouseCursors.click,
-      child: GestureDetector(
-        onTap: widget.onTap, // ✅ FIXED: Panggil onTap dari parameter
-        child: AnimatedDefaultTextStyle(
-          duration: const Duration(milliseconds: 200),
-          style: TextStyle(
-            color: _isHovering ? Colors.yellow : Colors.white,
-            fontWeight: FontWeight.w500,
-            fontSize: 16,
-            decoration: TextDecoration.none,
-          ),
-          child: Text(
-            widget.label,
-          ),
+                      builder: (context) => const TentangTablet()));
+            } else if (value == 'Laporan') {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const LaporanTablet()));
+            } else if (value == 'Berita') {
+            } else if (value == 'Pengaduan') {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const PengaduanNasabahTablet()));
+            } else if (value == 'Kontak') {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const KontakTablet()));
+            } else if (value == 'Lelang/Jual') {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Homeiklanpenjualantablet()));
+            }
+          },
+          itemBuilder: (context) => [
+            const PopupMenuItem(value: 'Tentang', child: Text('Tentang Kami')),
+            // const PopupMenuItem(value: 'Produk', child: Text('Produk')),
+            const PopupMenuItem(value: 'Laporan', child: Text('Laporan')),
+            const PopupMenuItem(value: 'Berita', child: Text('Berita')),
+            const PopupMenuItem(value: 'Pengaduan', child: Text('Pengaduan')),
+            const PopupMenuItem(value: 'Kontak', child: Text('Kontak')),
+            const PopupMenuItem(
+                value: 'Lelang/Jual', child: Text('Lelang/Jual')),
+          ],
         ),
-      ),
+      ],
     );
   }
 }

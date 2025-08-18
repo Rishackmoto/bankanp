@@ -81,7 +81,7 @@ class KontakDesktop extends StatelessWidget {
                     ),
                     Text(
                       textAlign: TextAlign.justify,
-                      '(0967) 51611933 / 6161668), Hp. : 082317739026',
+                      'Hp. : 082317739026',
                     ),
                     Text(
                       '📧 Email Layanan Nasabah:',
@@ -148,15 +148,6 @@ class KontakDesktop extends StatelessWidget {
                     Text(
                       textAlign: TextAlign.justify,
                       'kp.merauke@bankanp.com',
-                    ),
-                    Text(
-                      '🌐 Website Resmi:',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
-                    Text(
-                      textAlign: TextAlign.justify,
-                      'www.bankanp.com',
                     ),
                     Text(
                       '🕒 Jam Operasional:',

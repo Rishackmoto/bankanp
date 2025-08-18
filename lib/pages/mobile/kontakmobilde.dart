@@ -62,7 +62,7 @@ class KontakMobile extends StatelessWidget {
                 ),
                 Text(
                   textAlign: TextAlign.justify,
-                  '(0967) 51611933 / 6161668), Hp. : 082317739026',
+                  'Hp. : 082317739026',
                 ),
                 SizedBox(
                   height: 10,
@@ -129,17 +129,6 @@ class KontakMobile extends StatelessWidget {
                 Text(
                   textAlign: TextAlign.justify,
                   'kp.merauke@bankanp.com',
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  '🌐 Website Resmi:',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  textAlign: TextAlign.justify,
-                  'www.bankanp.com',
                 ),
                 SizedBox(
                   height: 10,

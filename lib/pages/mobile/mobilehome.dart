@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:website/carouselresponsive.dart';
-// ignore: unused_import
-import 'package:website/pages/desktop/carouseldesktop.dart';
-// ignore: unused_import
-import 'package:website/pages/listinformasiresponsive.dart';
 import 'package:website/pages/mobile/footermobile.dart';
 import 'package:website/pages/mobile/listutamamobile.dart';
 import 'package:website/pages/responsivenavbar.dart';
@@ -14,17 +9,22 @@ class HomePageMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        appBar: PreferredSize(
-            preferredSize: Size.fromHeight(50), child: ResponsiveNavbar()),
+    return Scaffold(
+        appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(50),
+          child: ResponsiveNavbar(),
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              CarouselResponsive(),
-              Text('MOBILE'),
-              TampilanUtamaResponsive(),
-              ListInformasiMobile(),
-              Footermobile()
+              // CarouselResponsive(),
+              Image.asset(
+                'assets/images/80hut_mobile.png',
+                fit: BoxFit.cover,
+              ),
+              const TampilanUtamaResponsive(),
+              const ListInformasiMobile(),
+              const Footermobile()
             ],
           ),
         ));

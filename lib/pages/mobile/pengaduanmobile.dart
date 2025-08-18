@@ -230,7 +230,7 @@ class _PengaduanNasabahMobileState extends State<PengaduanNasabahMobile> {
                               : const Icon(Icons.send, color: Colors.white),
                           label: Text(
                             loading ? 'Mengirim...' : 'Kirim Pengaduan',
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                           style: ElevatedButton.styleFrom(
                             padding: const EdgeInsets.symmetric(vertical: 16),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:website/carouselresponsive.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
 import 'package:website/pages/responsivenavbar.dart';
@@ -10,19 +9,22 @@ class HomePageDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PreferredSize(
+    return Scaffold(
+      appBar: const PreferredSize(
           preferredSize: Size.fromHeight(80), child: ResponsiveNavbar()),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CarouselResponsive(),
-              Text('DESKTOP'),
-              TampilanUtamaResponsive(),
-              ListInformasiResponsive(),
-              FooterResponsive(),
+              // CarouselResponsive(),
+              Image.asset(
+                'assets/images/80hut_desktops.png',
+                fit: BoxFit.cover,
+              ),
+              const TampilanUtamaResponsive(),
+              const ListInformasiResponsive(),
+              const FooterResponsive(),
             ],
           ),
         ),

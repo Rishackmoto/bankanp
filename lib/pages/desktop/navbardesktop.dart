@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:website/main.dart';
+import 'package:website/pages/desktop/homeiklanpenjualandesktop.dart';
+import 'package:website/pages/desktop/kontakdesktop.dart';
+import 'package:website/pages/desktop/laporandesktop.dart';
+import 'package:website/pages/desktop/pengaduandesktop.dart';
 
 import 'package:website/pages/desktop/tentangdesktop.dart';
 
@@ -44,16 +48,52 @@ class NavbarDesktop extends StatelessWidget {
                 },
               ),
               const SizedBox(width: 20),
-              const HoverText(label: 'Produk dan Layanan'),
-              const SizedBox(width: 20),
-              const HoverText(label: 'Laporan'),
+              HoverText(
+                label: 'Laporan',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LaporanDesktop(),
+                      ));
+                },
+              ),
               const SizedBox(width: 20),
               const HoverText(label: 'Berita dan Informasi'),
               const SizedBox(width: 20),
-              const HoverText(label: 'Pengaduan'),
+              HoverText(
+                label: 'Pengaduan',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PengaduanNasabahDesktop(),
+                      ));
+                },
+              ),
               const SizedBox(width: 20),
-              const HoverText(label: 'Kontak kami'),
+              HoverText(
+                label: 'Kontak Kami',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const KontakDesktop(),
+                      ));
+                },
+              ),
               const SizedBox(width: 20),
+              HoverText(
+                label: 'Lelang/Jual',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Homeiklanpenjualandesktop(),
+                      ));
+                },
+              ),
+              const SizedBox(width: 20)
             ],
           ),
         ],
@@ -65,7 +105,8 @@ class NavbarDesktop extends StatelessWidget {
 class HoverText extends StatefulWidget {
   final String label;
   final VoidCallback? onTap;
-  const HoverText({super.key, required this.label, this.onTap});
+  final List<SubMenu>? subMenus; // ⬅️ Tambahan
+  const HoverText({super.key, required this.label, this.onTap, this.subMenus});
 
   @override
   State<HoverText> createState() => _HoverTextState();
@@ -97,4 +138,11 @@ class _HoverTextState extends State<HoverText> {
       ),
     );
   }
+}
+
+class SubMenu {
+  final String label;
+  final VoidCallback? onTap;
+
+  SubMenu({required this.label, this.onTap});
 }

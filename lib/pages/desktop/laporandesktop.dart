@@ -10,7 +10,7 @@ class LaporanDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = MediaQuery.of(context).size.width < 800;
+    final isMobile = MediaQuery.of(context).size.width < 600;
 
     return Scaffold(
       appBar: const PreferredSize(
@@ -24,116 +24,104 @@ class LaporanDesktop extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
-                  Container(
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/images/ornamen.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      color: Color(0xFF132F55),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          isMobile
-                              ? Column(
-                                  children: [
-                                    Lottie.asset(
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        isMobile
+                            ? Column(
+                                children: [
+                                  Lottie.asset(
+                                    'assets/lottie/reportfinance.json',
+                                    height: 200,
+                                  ),
+                                  const SizedBox(height: 20),
+                                  const _Deskripsi(),
+                                ],
+                              )
+                            : Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Expanded(
+                                    flex: 1,
+                                    child: Lottie.asset(
                                       'assets/lottie/reportfinance.json',
-                                      height: 200,
+                                      height:
+                                          MediaQuery.of(context).size.height /
+                                              2,
                                     ),
-                                    const SizedBox(height: 20),
-                                    const _Deskripsi(),
-                                  ],
-                                )
-                              : Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Expanded(
-                                      flex: 1,
-                                      child: Lottie.asset(
-                                        'assets/lottie/reportfinance.json',
-                                        height:
-                                            MediaQuery.of(context).size.height /
-                                                2,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 20),
-                                    const Expanded(
-                                      flex: 2,
-                                      child: _Deskripsi(),
-                                    ),
-                                  ],
-                                ),
-                          const SizedBox(height: 20),
-                          const TabBar(
-                            indicatorColor: Colors.blue,
-                            labelColor: Colors.blue,
-                            unselectedLabelColor: Colors.grey,
-                            tabs: [
-                              Tab(icon: Icon(Icons.monitor), text: 'TRIWULAN'),
-                              Tab(icon: Icon(Icons.gavel), text: 'TATA KELOLA'),
-                              Tab(icon: Icon(Icons.eco), text: 'BERKELANJUTAN'),
-                              Tab(
-                                  icon: Icon(Icons.feedback),
-                                  text: 'PENGADUAN'),
+                                  ),
+                                  const SizedBox(width: 20),
+                                  const Expanded(
+                                    flex: 2,
+                                    child: _Deskripsi(),
+                                  ),
+                                ],
+                              ),
+                        const SizedBox(height: 20),
+                        const TabBar(
+                          indicatorColor: Colors.blue,
+                          labelColor: Colors.blue,
+                          unselectedLabelColor: Colors.grey,
+                          tabs: [
+                            Tab(icon: Icon(Icons.monitor), text: 'TRIWULAN'),
+                            Tab(icon: Icon(Icons.gavel), text: 'TATA KELOLA'),
+                            Tab(icon: Icon(Icons.eco), text: 'BERKELANJUTAN'),
+                            Tab(icon: Icon(Icons.feedback), text: 'PENGADUAN'),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        const SizedBox(
+                          height: 500,
+                          child: TabBarView(
+                            children: [
+                              _ListLaporan([
+                                {
+                                  'tahun': '2025',
+                                  'judul': 'Triwulan I',
+                                  'pdf':
+                                      'https://file.rishackmoto.com/files/TW12025.pdf'
+                                },
+                                {
+                                  'tahun': '2025',
+                                  'judul': 'Triwulan II',
+                                  'pdf':
+                                      'https://file.rishackmoto.com/files/TW22025.pdf'
+                                },
+                                {
+                                  'tahun': '2025',
+                                  'judul': 'Triwulan III',
+                                  'pdf': 'https://example.com/triwulan2.pdf'
+                                },
+                              ]),
+                              _ListLaporan([
+                                {
+                                  'tahun': '2025',
+                                  'judul': 'Tata Kelola 2025',
+                                  'pdf':
+                                      'https://example.com/tatakelola2023.pdf'
+                                },
+                              ]),
+                              _ListLaporan([
+                                {
+                                  'tahun': '2025',
+                                  'judul': 'Laporan Berkelanjutan',
+                                  'pdf':
+                                      'https://example.com/berkelanjutan2022.pdf'
+                                },
+                              ]),
+                              _ListLaporan([
+                                {
+                                  'tahun': '2025',
+                                  'judul': 'Rekap Pengaduan',
+                                  'pdf': 'https://example.com/pengaduan2023.pdf'
+                                },
+                              ]),
                             ],
                           ),
-                          const SizedBox(height: 20),
-                          const SizedBox(
-                            height: 500,
-                            child: TabBarView(
-                              children: [
-                                _ListLaporan([
-                                  {
-                                    'tahun': '2025',
-                                    'judul': 'Triwulan I',
-                                    'pdf':
-                                        'https://file.rishackmoto.com/files/TW12025.pdf'
-                                  },
-                                  {
-                                    'tahun': '2025',
-                                    'judul': 'Triwulan II',
-                                    'pdf':
-                                        'https://file.rishackmoto.com/files/TW22025.pdf'
-                                  },
-                                  {
-                                    'tahun': '2025',
-                                    'judul': 'Triwulan III',
-                                    'pdf': 'https://example.com/triwulan2.pdf'
-                                  },
-                                ]),
-                                _ListLaporan([
-                                  {
-                                    'tahun': '2025',
-                                    'judul': 'Tata Kelola 2025',
-                                    'pdf':
-                                        'https://example.com/tatakelola2023.pdf'
-                                  },
-                                ]),
-                                _ListLaporan([
-                                  {
-                                    'tahun': '2025',
-                                    'judul': 'Laporan Berkelanjutan',
-                                    'pdf':
-                                        'https://example.com/berkelanjutan2022.pdf'
-                                  },
-                                ]),
-                                _ListLaporan([
-                                  {
-                                    'tahun': '2025',
-                                    'judul': 'Rekap Pengaduan',
-                                    'pdf':
-                                        'https://example.com/pengaduan2023.pdf'
-                                  },
-                                ]),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   const FooterResponsive()
@@ -156,7 +144,7 @@ class _Deskripsi extends StatelessWidget {
     return const Text(
       textAlign: TextAlign.justify,
       'Sebagai bentuk komitmen kami terhadap keterbukaan informasi dan tanggung jawab kepada seluruh pemangku kepentingan, Bank Perekenomonian Rakyat (BPR) secara rutin mempublikasikan laporan keuangan dan kinerja perusahaan.',
-      style: TextStyle(color: Colors.white, fontSize: 20),
+      style: TextStyle(fontSize: 20),
     );
   }
 }

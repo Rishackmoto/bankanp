@@ -58,7 +58,7 @@ class Footermobile extends StatelessWidget {
                           Icon(Icons.phone, color: Colors.white),
                           Expanded(
                             child: Text(
-                              '(0967) 5161933 / 5161338 / 0823-1773-9026',
+                              '0823-1773-9026',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),

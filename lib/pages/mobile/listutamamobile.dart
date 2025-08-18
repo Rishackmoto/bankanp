@@ -294,45 +294,40 @@ class ListInformasiMobile extends StatelessWidget {
                             actions: [
                               Lottie.asset('assets/lottie/complaint.json',
                                   height:
-                                      MediaQuery.sizeOf(context).height / 3),
-                              Expanded(
-                                flex: 2,
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      'Kami Mendengar, Kami Peduli 💙',
-                                      style: TextStyle(
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const Text(
-                                      textAlign: TextAlign.justify,
-                                      'Suara Anda sangat berarti bagi kami.Laporkan kendala atau keluhan Anda di sini, dan tim kami siap membantu menemukan solusi terbaik untuk Anda.',
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                          color: const Color(0xFFE7321C)),
-                                      child: TextButton(
-                                          onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const PengaduanNasabahMobile(),
-                                                ));
-                                          },
-                                          child: const Text(
-                                            'Selengkapnya',
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                    )
-                                  ],
-                                ),
+                                      MediaQuery.sizeOf(context).height / 3.5),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    'Kami Mendengar, Kami Peduli 💙',
+                                    style: TextStyle(
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  const Text(
+                                    textAlign: TextAlign.justify,
+                                    'Suara Anda sangat berarti bagi kami.Laporkan kendala atau keluhan Anda di sini, dan tim kami siap membantu menemukan solusi terbaik untuk Anda.',
+                                  ),
+                                  const SizedBox(height: 10),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: const Color(0xFFE7321C)),
+                                    child: TextButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const PengaduanNasabahMobile(),
+                                              ));
+                                        },
+                                        child: const Text(
+                                          'Selengkapnya',
+                                          style: TextStyle(color: Colors.white),
+                                        )),
+                                  )
+                                ],
                               ),
                             ],
                           );

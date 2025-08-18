@@ -234,7 +234,10 @@ class _PengaduanNasabahTabletState extends State<PengaduanNasabahTablet> {
                                     child: CircularProgressIndicator(
                                         strokeWidth: 2, color: Colors.white),
                                   )
-                                : const Icon(Icons.send),
+                                : const Icon(
+                                    Icons.send,
+                                    color: Colors.white,
+                                  ),
                             label: Text(
                               loading ? 'Mengirim...' : 'Kirim Pengaduan',
                               style: const TextStyle(color: Colors.white),
