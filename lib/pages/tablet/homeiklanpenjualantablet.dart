@@ -46,7 +46,7 @@ class _HomeiklanpenjualantabletState extends State<Homeiklanpenjualantablet> {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(80),
+        preferredSize: Size.fromHeight(50),
         child: ResponsiveNavbar(),
       ),
       body: jaminanList.isEmpty

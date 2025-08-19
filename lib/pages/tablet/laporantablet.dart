@@ -11,7 +11,7 @@ class LaporanTablet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(80),
+        preferredSize: Size.fromHeight(50),
         child: ResponsiveNavbar(),
       ),
       body: DefaultTabController(

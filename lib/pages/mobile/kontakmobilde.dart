@@ -13,7 +13,7 @@ class KontakMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(80), child: ResponsiveNavbar()),
+          preferredSize: Size.fromHeight(50), child: ResponsiveNavbar()),
       body: SingleChildScrollView(
           child: Column(
         children: [

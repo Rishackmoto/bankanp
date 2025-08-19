@@ -46,7 +46,7 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(80),
+        preferredSize: Size.fromHeight(50),
         child: ResponsiveNavbar(),
       ),
       body: jaminanList.isEmpty
@@ -81,7 +81,7 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
                       ],
                     ),
                   ),
-                  const SizedBox(width: 10),
+                  const SizedBox(height: 10),
                   Lottie.asset(
                     'assets/lottie/lelang.json',
                     height: MediaQuery.sizeOf(context).height / 2.2,

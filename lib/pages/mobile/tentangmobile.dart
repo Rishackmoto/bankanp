@@ -9,7 +9,7 @@ class TentangMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(80), child: NavbarMobile()),
+          preferredSize: Size.fromHeight(50), child: NavbarMobile()),
       body: SingleChildScrollView(
           child: Column(
         children: [

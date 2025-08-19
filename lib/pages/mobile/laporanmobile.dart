@@ -14,7 +14,7 @@ class LaporanMobile extends StatelessWidget {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(80),
+        preferredSize: Size.fromHeight(50),
         child: ResponsiveNavbar(),
       ),
       body: DefaultTabController(
