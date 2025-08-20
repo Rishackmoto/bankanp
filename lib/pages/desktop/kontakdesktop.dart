@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:miss/pages/footerresponsive.dart';
+import 'package:website/pages/footerresponsive.dart';
 import 'dart:ui_web' as ui;
 import 'dart:html';
 
-import 'package:miss/pages/responsivenavbar.dart';
+import 'package:website/pages/responsivenavbar.dart';
 
 class KontakDesktop extends StatelessWidget {
   const KontakDesktop({super.key});
@@ -93,7 +93,7 @@ class KontakDesktop extends StatelessWidget {
                       'kp.jayapura@bankanp.com',
                     ),
                     Text(
-                      '🌐 miss Resmi:',
+                      '🌐 website Resmi:',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/desktop/laporandesktop.dart';
-import 'package:miss/pages/mobile/laporanmobile.dart';
-import 'package:miss/pages/tablet/laporantablet.dart';
+import 'package:website/pages/desktop/laporandesktop.dart';
+import 'package:website/pages/mobile/laporanmobile.dart';
+import 'package:website/pages/tablet/laporantablet.dart';
 
 class LaporanResponsive extends StatelessWidget {
   const LaporanResponsive({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/desktop/listutamadesktop.dart';
-import 'package:miss/pages/mobile/listutamamobile.dart';
-import 'package:miss/pages/tablet/listutamatablet.dart';
+import 'package:website/pages/desktop/listutamadesktop.dart';
+import 'package:website/pages/mobile/listutamamobile.dart';
+import 'package:website/pages/tablet/listutamatablet.dart';
 
 class ListInformasiResponsive extends StatelessWidget {
   const ListInformasiResponsive({super.key});

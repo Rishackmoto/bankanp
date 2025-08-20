@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/desktop/carouseldesktop.dart';
-import 'package:miss/pages/mobile/carouselmobile.dart';
-import 'package:miss/pages/tablet/carouseltablet.dart';
+import 'package:website/pages/desktop/carouseldesktop.dart';
+import 'package:website/pages/mobile/carouselmobile.dart';
+import 'package:website/pages/tablet/carouseltablet.dart';
 
 class CarouselResponsive extends StatelessWidget {
   const CarouselResponsive({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/footerresponsive.dart';
-import 'package:miss/pages/listinformasiresponsive.dart';
+import 'package:website/pages/footerresponsive.dart';
+import 'package:website/pages/listinformasiresponsive.dart';
 
-import 'package:miss/pages/responsivenavbar.dart';
-import 'package:miss/pages/tampilanutamaresponsive.dart';
+import 'package:website/pages/responsivenavbar.dart';
+import 'package:website/pages/tampilanutamaresponsive.dart';
 
 class TabletHomePage extends StatelessWidget {
   const TabletHomePage({super.key});

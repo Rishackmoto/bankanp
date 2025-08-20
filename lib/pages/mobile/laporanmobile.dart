@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import 'package:miss/pages/footerresponsive.dart';
-import 'package:miss/pages/pdfiframeviewer.dart';
-import 'package:miss/pages/responsivenavbar.dart';
+import 'package:website/pages/footerresponsive.dart';
+import 'package:website/pages/pdfiframeviewer.dart';
+import 'package:website/pages/responsivenavbar.dart';
 
 class LaporanMobile extends StatelessWidget {
   const LaporanMobile({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:miss/main.dart';
-import 'package:miss/pages/tablet/homeiklanpenjualantablet.dart';
-import 'package:miss/pages/tablet/kontaktablet.dart';
-import 'package:miss/pages/tablet/laporantablet.dart';
-import 'package:miss/pages/tablet/pengaduantablet.dart';
-import 'package:miss/pages/tablet/tentangtablet.dart';
+import 'package:website/main.dart';
+import 'package:website/pages/tablet/homeiklanpenjualantablet.dart';
+import 'package:website/pages/tablet/kontaktablet.dart';
+import 'package:website/pages/tablet/laporantablet.dart';
+import 'package:website/pages/tablet/pengaduantablet.dart';
+import 'package:website/pages/tablet/tentangtablet.dart';
 
 class NavbarTablet extends StatelessWidget {
   const NavbarTablet({super.key});

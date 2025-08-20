@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/footerresponsive.dart';
-import 'package:miss/pages/mobile/navbarmobile.dart';
+import 'package:website/pages/footerresponsive.dart';
+import 'package:website/pages/mobile/navbarmobile.dart';
 
 class TentangMobile extends StatelessWidget {
   const TentangMobile({super.key});

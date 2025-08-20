@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:miss/pages/desktop/depositodesk.dart';
-import 'package:miss/pages/desktop/kontakdesktop.dart';
-import 'package:miss/pages/desktop/kreditdesk.dart';
-import 'package:miss/pages/desktop/laporandesktop.dart';
-import 'package:miss/pages/desktop/pengaduandesktop.dart';
-import 'package:miss/pages/desktop/tabungandesk.dart';
-import 'package:miss/pages/desktop/tentangdesktop.dart';
+import 'package:website/pages/desktop/depositodesk.dart';
+import 'package:website/pages/desktop/kontakdesktop.dart';
+import 'package:website/pages/desktop/kreditdesk.dart';
+import 'package:website/pages/desktop/laporandesktop.dart';
+import 'package:website/pages/desktop/pengaduandesktop.dart';
+import 'package:website/pages/desktop/tabungandesk.dart';
+import 'package:website/pages/desktop/tentangdesktop.dart';
 
 class ListInformasi extends StatelessWidget {
   const ListInformasi({

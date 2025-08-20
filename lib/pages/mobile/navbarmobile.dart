@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:miss/main.dart';
-import 'package:miss/pages/mobile/homeiklanpenjualanmobile.dart';
-import 'package:miss/pages/mobile/kontakmobilde.dart';
-import 'package:miss/pages/mobile/laporanmobile.dart';
-import 'package:miss/pages/mobile/pengaduanmobile.dart';
-import 'package:miss/pages/mobile/tentangmobile.dart';
+import 'package:website/main.dart';
+import 'package:website/pages/mobile/homeiklanpenjualanmobile.dart';
+import 'package:website/pages/mobile/kontakmobilde.dart';
+import 'package:website/pages/mobile/laporanmobile.dart';
+import 'package:website/pages/mobile/pengaduanmobile.dart';
+import 'package:website/pages/mobile/tentangmobile.dart';
 
 class NavbarMobile extends StatelessWidget {
   const NavbarMobile({super.key});

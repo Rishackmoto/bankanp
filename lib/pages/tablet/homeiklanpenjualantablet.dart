@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // ✅ buat rootBundle
 import 'package:lottie/lottie.dart';
-import 'package:miss/pages/desktop/detailjaminandesktop.dart';
-import 'package:miss/pages/footerresponsive.dart';
-import 'package:miss/pages/responsivenavbar.dart';
+import 'package:website/pages/desktop/detailjaminandesktop.dart';
+import 'package:website/pages/footerresponsive.dart';
+import 'package:website/pages/responsivenavbar.dart';
 
 class Homeiklanpenjualantablet extends StatefulWidget {
   const Homeiklanpenjualantablet({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/desktop/kreditdesk.dart';
-import 'package:miss/pages/mobile/kreditmobile.dart';
+import 'package:website/pages/desktop/kreditdesk.dart';
+import 'package:website/pages/mobile/kreditmobile.dart';
 
 class KreditResponsive extends StatelessWidget {
   const KreditResponsive({super.key});

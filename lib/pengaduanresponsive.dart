@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/desktop/pengaduandesktop.dart';
-import 'package:miss/pages/mobile/pengaduanmobile.dart';
-import 'package:miss/pages/tablet/pengaduantablet.dart';
+import 'package:website/pages/desktop/pengaduandesktop.dart';
+import 'package:website/pages/mobile/pengaduanmobile.dart';
+import 'package:website/pages/tablet/pengaduantablet.dart';
 
 class PengaduanResponsive extends StatelessWidget {
   const PengaduanResponsive({super.key});

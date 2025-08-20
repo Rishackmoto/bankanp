@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:miss/pages/desktop/homeiklanpenjualandesktop.dart';
-import 'package:miss/pages/mobile/homeiklanpenjualanmobile.dart';
-import 'package:miss/pages/tablet/homeiklanpenjualantablet.dart';
+import 'package:website/pages/desktop/homeiklanpenjualandesktop.dart';
+import 'package:website/pages/mobile/homeiklanpenjualanmobile.dart';
+import 'package:website/pages/tablet/homeiklanpenjualantablet.dart';
 
 class HomePenjualanResponsive extends StatelessWidget {
   const HomePenjualanResponsive({super.key});

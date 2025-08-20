@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:miss/loginpagedesk.dart';
-import 'package:miss/pages/desktop/desktophome.dart';
-import 'package:miss/pages/mobile/mobilehome.dart';
-import 'package:miss/pages/tablet/tablethome.dart';
-import 'package:miss/responsive.dart';
+import 'package:website/pages/desktop/desktophome.dart';
+import 'package:website/pages/mobile/mobilehome.dart';
+import 'package:website/pages/tablet/tablethome.dart';
+import 'package:website/responsive.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,12 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)),
-      initialRoute: '/login',
-      routes: {
-        '/login': (context) => const LoginScreen(),
-        '/halaman_utaman': (context) => const HomePage(),
-        // '/template': (context) => const TemplatePage(title: 'Halaman Baru'),
-      },
+      home: const HomePage(),
     );
   }
 }

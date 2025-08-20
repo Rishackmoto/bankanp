@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:miss/pages/footerresponsive.dart';
-import 'package:miss/pages/responsivenavbar.dart';
+import 'package:website/pages/footerresponsive.dart';
+import 'package:website/pages/responsivenavbar.dart';
 
 class DepositoMobile extends StatelessWidget {
   const DepositoMobile({super.key});
