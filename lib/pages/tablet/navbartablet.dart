@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/main.dart';
+import 'package:website/pages/mobile/loginmobile.dart';
 import 'package:website/pages/tablet/homeiklanpenjualantablet.dart';
 import 'package:website/pages/tablet/kontaktablet.dart';
 import 'package:website/pages/tablet/laporantablet.dart';
@@ -24,11 +25,11 @@ class NavbarTablet extends StatelessWidget {
           scale: 9,
         ),
         onTap: () {
+          Navigator.pop(context); // tutup dialog / halaman sekarang
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HomePage(),
-              ));
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
         },
       ),
       actions: [
@@ -62,6 +63,11 @@ class NavbarTablet extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const Homeiklanpenjualantablet()));
+            } else if (value == 'Login') {
+              Navigator.push(
+                  context,
+                  (MaterialPageRoute(
+                      builder: (context) => const LoginMISSMobile())));
             }
           },
           itemBuilder: (context) => [
@@ -73,6 +79,7 @@ class NavbarTablet extends StatelessWidget {
             const PopupMenuItem(value: 'Kontak', child: Text('Kontak')),
             const PopupMenuItem(
                 value: 'Lelang/Jual', child: Text('Lelang/Jual')),
+            const PopupMenuItem(value: 'Login', child: Text('Login')),
           ],
         ),
       ],

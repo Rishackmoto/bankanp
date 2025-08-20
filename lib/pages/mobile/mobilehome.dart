@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:website/pages/mobile/footermobile.dart';
 import 'package:website/pages/mobile/listutamamobile.dart';
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:website/pages/mobile/navbarmobile.dart';
 import 'package:website/pages/tampilanutamaresponsive.dart';
 
 class HomePageMobile extends StatelessWidget {
@@ -12,7 +12,7 @@ class HomePageMobile extends StatelessWidget {
     return Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(50),
-          child: ResponsiveNavbar(),
+          child: NavbarMobile(),
         ),
         body: SingleChildScrollView(
           child: Column(
@@ -23,6 +23,7 @@ class HomePageMobile extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               const TampilanUtamaResponsive(),
+
               const ListInformasiMobile(),
               const Footermobile()
             ],

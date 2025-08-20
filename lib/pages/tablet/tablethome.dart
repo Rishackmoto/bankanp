@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
-
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:website/pages/tablet/navbartablet.dart';
 import 'package:website/pages/tampilanutamaresponsive.dart';
 
 class TabletHomePage extends StatelessWidget {
@@ -13,7 +12,7 @@ class TabletHomePage extends StatelessWidget {
     return Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(50),
-          child: ResponsiveNavbar(),
+          child: NavbarTablet(),
         ),
         body: SingleChildScrollView(
           child: Column(

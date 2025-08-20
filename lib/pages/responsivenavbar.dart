@@ -9,13 +9,17 @@ class ResponsiveNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final isMobile = screenWidth < 600;
+    final isTablet = screenWidth > 600 && screenWidth < 1100;
+    final isDesktop = screenWidth > 1100;
 
-    if (screenWidth < 600) {
-      return const NavbarMobile();
-    } else if (screenWidth > 600 && screenWidth < 1100) {
-      return const NavbarTablet();
-    } else {
-      return const NavbarDesktop();
-    }
+    return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+      if (isMobile)
+        const NavbarMobile()
+      else if (isTablet)
+        const NavbarTablet()
+      else if (isDesktop)
+        const NavbarDesktop()
+    ]);
   }
 }

@@ -28,11 +28,11 @@ class NavbarDesktop extends StatelessWidget {
               'assets/images/anp_white.png',
             ),
             onTap: () {
+              Navigator.pop(context); // tutup dialog / halaman sekarang
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                  ));
+                context,
+                MaterialPageRoute(builder: (context) => const HomePage()),
+              );
             },
           ),
           Row(

@@ -25,11 +25,11 @@ class NavbarMobile extends StatelessWidget {
           scale: 9,
         ),
         onTap: () {
+          Navigator.pop(context); // tutup dialog / halaman sekarang
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HomePage(),
-              ));
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
         },
       ),
       actions: [
