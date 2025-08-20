@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/footerresponsive.dart';
+import 'package:miss/pages/footerresponsive.dart';
 import 'dart:ui_web' as ui;
 import 'dart:html';
 
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:miss/pages/responsivenavbar.dart';
 
 class KontakMobile extends StatelessWidget {
   const KontakMobile({super.key});
@@ -79,7 +79,7 @@ class KontakMobile extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  '🌐 Website Resmi:',
+                  '🌐 miss Resmi:',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Text(

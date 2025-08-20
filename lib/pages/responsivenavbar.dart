@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/navbardesktop.dart';
-import 'package:website/pages/mobile/navbarmobile.dart';
-import 'package:website/pages/tablet/navbartablet.dart';
+import 'package:miss/pages/desktop/navbardesktop.dart';
+import 'package:miss/pages/mobile/navbarmobile.dart';
+import 'package:miss/pages/tablet/navbartablet.dart';
 
 class ResponsiveNavbar extends StatelessWidget {
   const ResponsiveNavbar({super.key});

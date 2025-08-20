@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/footerdesktop.dart';
-import 'package:website/pages/mobile/footermobile.dart';
-import 'package:website/pages/tablet/footertablet.dart';
+import 'package:miss/pages/desktop/footerdesktop.dart';
+import 'package:miss/pages/mobile/footermobile.dart';
+import 'package:miss/pages/tablet/footertablet.dart';
 
 class FooterResponsive extends StatelessWidget {
   const FooterResponsive({super.key});

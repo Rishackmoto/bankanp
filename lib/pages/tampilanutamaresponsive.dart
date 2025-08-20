@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/tampilanutamadesktop.dart';
-import 'package:website/pages/mobile/tampilanutamamobile.dart';
-import 'package:website/pages/tablet/tampilanutamatablet.dart';
+import 'package:miss/pages/desktop/tampilanutamadesktop.dart';
+import 'package:miss/pages/mobile/tampilanutamamobile.dart';
+import 'package:miss/pages/tablet/tampilanutamatablet.dart';
 
 class TampilanUtamaResponsive extends StatelessWidget {
   const TampilanUtamaResponsive({super.key});

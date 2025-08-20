@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:website/main.dart';
-import 'package:website/pages/desktop/homeiklanpenjualandesktop.dart';
-import 'package:website/pages/desktop/kontakdesktop.dart';
-import 'package:website/pages/desktop/laporandesktop.dart';
-import 'package:website/pages/desktop/pengaduandesktop.dart';
+import 'package:miss/main.dart';
+import 'package:miss/pages/desktop/homeiklanpenjualandesktop.dart';
+import 'package:miss/pages/desktop/kontakdesktop.dart';
+import 'package:miss/pages/desktop/laporandesktop.dart';
+import 'package:miss/pages/desktop/pengaduandesktop.dart';
 
-import 'package:website/pages/desktop/tentangdesktop.dart';
+import 'package:miss/pages/desktop/tentangdesktop.dart';
 
 class NavbarDesktop extends StatelessWidget {
   const NavbarDesktop({super.key});

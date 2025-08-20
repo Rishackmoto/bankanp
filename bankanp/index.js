@@ -13,6 +13,7 @@ console.log('API_BASE_URL:', process.env.API_BASE_URL);
 
 // 📦 Import route
 const pengaduanRoute = require('./routes/pengaduan');
+const authRouteRoute = require('./routes/auth');
 
 const app = express();
 
@@ -56,6 +57,7 @@ app.use((req, res, next) => {
 });
 
 // 📌 Pasang route
+app.use('/auth', authRoute);
 app.use('/pengaduan', pengaduanRoute);
 
 // 🚀 Listener

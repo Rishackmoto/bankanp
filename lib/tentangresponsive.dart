@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/tentangdesktop.dart';
-import 'package:website/pages/mobile/tentangmobile.dart';
-import 'package:website/pages/tablet/tentangtablet.dart';
+import 'package:miss/pages/desktop/tentangdesktop.dart';
+import 'package:miss/pages/mobile/tentangmobile.dart';
+import 'package:miss/pages/tablet/tentangtablet.dart';
 
 class TentangResponsive extends StatelessWidget {
   const TentangResponsive({super.key});
