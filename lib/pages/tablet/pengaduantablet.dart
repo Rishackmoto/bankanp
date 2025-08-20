@@ -189,7 +189,7 @@ class _PengaduanNasabahTabletState extends State<PengaduanNasabahTablet> {
 
                         // Jenis Pengaduan
                         DropdownButtonFormField<String>(
-                          value: selectedJenis,
+                          initialValue: selectedJenis,
                           items: jenisList
                               .map((jenis) => DropdownMenuItem(
                                     value: jenis,

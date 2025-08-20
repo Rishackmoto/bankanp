@@ -3,6 +3,7 @@ import 'package:website/main.dart';
 import 'package:website/pages/mobile/homeiklanpenjualanmobile.dart';
 import 'package:website/pages/mobile/kontakmobilde.dart';
 import 'package:website/pages/mobile/laporanmobile.dart';
+import 'package:website/pages/mobile/loginmobile.dart';
 import 'package:website/pages/mobile/pengaduanmobile.dart';
 import 'package:website/pages/mobile/tentangmobile.dart';
 
@@ -62,6 +63,11 @@ class NavbarMobile extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const Homeiklanpenjualanmobile()));
+            } else if (value == 'Login') {
+              Navigator.push(
+                  context,
+                  (MaterialPageRoute(
+                      builder: (context) => const LoginMISSMobile())));
             }
           },
           itemBuilder: (context) => [
@@ -73,6 +79,7 @@ class NavbarMobile extends StatelessWidget {
             const PopupMenuItem(value: 'Kontak', child: Text('Kontak')),
             const PopupMenuItem(
                 value: 'Lelang/Jual', child: Text('Lelang/Jual')),
+            const PopupMenuItem(value: 'Login', child: Text('Login')),
           ],
         ),
       ],
