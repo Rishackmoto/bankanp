@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/kontakdesktop.dart';
-import 'package:website/pages/mobile/kontakmobilde.dart';
-import 'package:website/pages/tablet/kontaktablet.dart';
+import 'package:miss/pages/desktop/kontakdesktop.dart';
+import 'package:miss/pages/mobile/kontakmobilde.dart';
+import 'package:miss/pages/tablet/kontaktablet.dart';
 
 class KontakResponsive extends StatelessWidget {
   const KontakResponsive({super.key});

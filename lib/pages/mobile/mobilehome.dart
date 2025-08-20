@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/mobile/footermobile.dart';
-import 'package:website/pages/mobile/listutamamobile.dart';
-import 'package:website/pages/responsivenavbar.dart';
-import 'package:website/pages/tampilanutamaresponsive.dart';
+import 'package:miss/pages/mobile/footermobile.dart';
+import 'package:miss/pages/mobile/listutamamobile.dart';
+import 'package:miss/pages/responsivenavbar.dart';
+import 'package:miss/pages/tampilanutamaresponsive.dart';
 
 class HomePageMobile extends StatelessWidget {
   const HomePageMobile({super.key});

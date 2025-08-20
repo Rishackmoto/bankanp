@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:miss/pages/footerresponsive.dart';
+import 'package:miss/pages/responsivenavbar.dart';
 
 class KreditMobile extends StatelessWidget {
   const KreditMobile({super.key});

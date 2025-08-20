@@ -3,8 +3,8 @@ import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:miss/pages/footerresponsive.dart';
+import 'package:miss/pages/responsivenavbar.dart';
 
 class PengaduanNasabahDesktop extends StatefulWidget {
   const PengaduanNasabahDesktop({super.key});

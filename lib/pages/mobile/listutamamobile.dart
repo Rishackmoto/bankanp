@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/desktop/kreditdesk.dart';
-import 'package:website/pages/desktop/laporandesktop.dart';
-import 'package:website/pages/mobile/depositomobile.dart';
-import 'package:website/pages/mobile/kontakmobilde.dart';
-import 'package:website/pages/mobile/kreditmobile.dart';
-import 'package:website/pages/mobile/pengaduanmobile.dart';
-import 'package:website/pages/mobile/tabunganmobile.dart';
-import 'package:website/pages/mobile/tentangmobile.dart';
+import 'package:miss/pages/desktop/kreditdesk.dart';
+import 'package:miss/pages/desktop/laporandesktop.dart';
+import 'package:miss/pages/mobile/depositomobile.dart';
+import 'package:miss/pages/mobile/kontakmobilde.dart';
+import 'package:miss/pages/mobile/kreditmobile.dart';
+import 'package:miss/pages/mobile/pengaduanmobile.dart';
+import 'package:miss/pages/mobile/tabunganmobile.dart';
+import 'package:miss/pages/mobile/tentangmobile.dart';
 
 class ListInformasiMobile extends StatelessWidget {
   const ListInformasiMobile({

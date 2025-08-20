@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:miss/pages/footerresponsive.dart';
+import 'package:miss/pages/responsivenavbar.dart';
 
 class TabunganTablet extends StatelessWidget {
   const TabunganTablet({super.key});
@@ -56,10 +56,13 @@ class TabunganTablet extends StatelessWidget {
                   '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah perorangan dan non perorangan',
                 ),
                 Text(
-                  '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 10.000 ',
+                  '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 50.000 ',
                 ),
                 Text(
                   '✅Saldo mengendap Rp. 50.000',
+                ),
+                Text(
+                  '✅Suku Bunga 1%',
                 ),
                 SizedBox(
                   height: 10,
@@ -77,6 +80,9 @@ class TabunganTablet extends StatelessWidget {
                 Text(
                   '✅Saldo mengendap Rp. 20.000',
                 ),
+                Text(
+                  '✅Suku Bunga 1%',
+                ),
                 SizedBox(
                   height: 10,
                 ),
@@ -88,10 +94,10 @@ class TabunganTablet extends StatelessWidget {
                   '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah perorangan dan non perorangan',
                 ),
                 Text(
-                  '✅Setoran awal Rp. 50.000, setoran selanjutnya minimal Rp. 250.000 ',
+                  '✅Setoran awal Rp. 50.000.000, setoran selanjutnya minimal Rp. 250.000 ',
                 ),
                 Text(
-                  '✅Saldo mengendap Rp. 20.000',
+                  '✅Saldo mengendap Rp. 250.000',
                 ),
                 Text(
                   '✅Suku Bunga 2%',
@@ -107,13 +113,13 @@ class TabunganTablet extends StatelessWidget {
                   '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah non perorangan yang merupakan lembaga jasa keuangan /bank',
                 ),
                 Text(
-                  '✅Setoran awal Rp. 1.000.000, setoran selanjutnya minimal Rp. 10.000 ',
+                  '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 50.000 ',
                 ),
                 Text(
-                  '✅Saldo mengendap Rp. 250.000',
+                  '✅Saldo mengendap Rp. 50.000',
                 ),
                 Text(
-                  '✅Suku Bunga 2%',
+                  '✅Suku Bunga 1%',
                 ),
                 SizedBox(
                   height: 10,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/tabungandesk.dart';
-import 'package:website/pages/mobile/tabunganmobile.dart';
-import 'package:website/pages/tablet/tabungantablet.dart';
+import 'package:miss/pages/desktop/tabungandesk.dart';
+import 'package:miss/pages/mobile/tabunganmobile.dart';
+import 'package:miss/pages/tablet/tabungantablet.dart';
 
 class TabunganResponsive extends StatelessWidget {
   const TabunganResponsive({super.key});

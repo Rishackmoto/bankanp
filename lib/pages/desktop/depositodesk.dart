@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/navbardesktop.dart';
+import 'package:miss/pages/desktop/navbardesktop.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/footerresponsive.dart';
+import 'package:miss/pages/footerresponsive.dart';
 
 class DepositoDesktop extends StatelessWidget {
   const DepositoDesktop({super.key});

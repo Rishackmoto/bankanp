@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/footerdesktop.dart';
+import 'package:miss/pages/desktop/footerdesktop.dart';
 
-import 'package:website/pages/desktop/navbardesktop.dart';
+import 'package:miss/pages/desktop/navbardesktop.dart';
 
 class TentangDesktopold extends StatelessWidget {
   const TentangDesktopold({super.key});

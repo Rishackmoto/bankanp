@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/desktop/kreditdesk.dart';
-import 'package:website/pages/tablet/depositotablet.dart';
-import 'package:website/pages/tablet/kontaktablet.dart';
-import 'package:website/pages/tablet/kredittablet.dart';
-import 'package:website/pages/tablet/laporantablet.dart';
-import 'package:website/pages/tablet/pengaduantablet.dart';
-import 'package:website/pages/tablet/tabungantablet.dart';
-import 'package:website/pages/tablet/tentangtablet.dart';
+import 'package:miss/pages/desktop/kreditdesk.dart';
+import 'package:miss/pages/tablet/depositotablet.dart';
+import 'package:miss/pages/tablet/kontaktablet.dart';
+import 'package:miss/pages/tablet/kredittablet.dart';
+import 'package:miss/pages/tablet/laporantablet.dart';
+import 'package:miss/pages/tablet/pengaduantablet.dart';
+import 'package:miss/pages/tablet/tabungantablet.dart';
+import 'package:miss/pages/tablet/tentangtablet.dart';
 
 class ListInformasiTablet extends StatelessWidget {
   const ListInformasiTablet({
