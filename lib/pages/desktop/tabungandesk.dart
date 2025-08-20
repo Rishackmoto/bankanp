@@ -57,10 +57,13 @@ class TabunganDesktop extends StatelessWidget {
                               '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah perorangan dan non perorangan',
                             ),
                             Text(
-                              '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 10.000 ',
+                              '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 50.000 ',
                             ),
                             Text(
                               '✅Saldo mengendap Rp. 50.000',
+                            ),
+                            Text(
+                              '✅Suku Bunga 1%',
                             ),
                           ],
                         ),
@@ -82,7 +85,10 @@ class TabunganDesktop extends StatelessWidget {
                               '✅Setoran awal Rp. 20.000, setoran selanjutnya minimal Rp. 10.000 ',
                             ),
                             Text(
-                              '✅Saldo mengendap Rp. 20.000',
+                              '✅Saldo mengendap Rp. 10.000',
+                            ),
+                            Text(
+                              '✅Suku Bunga 1%',
                             ),
                           ],
                         ),
@@ -101,10 +107,10 @@ class TabunganDesktop extends StatelessWidget {
                               '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah perorangan dan non perorangan',
                             ),
                             Text(
-                              '✅Setoran awal Rp. 50.000, setoran selanjutnya minimal Rp. 250.000 ',
+                              '✅Setoran awal Rp. 50.000.000, setoran selanjutnya minimal Rp. 250.000 ',
                             ),
                             Text(
-                              '✅Saldo mengendap Rp. 20.000',
+                              '✅Saldo mengendap Rp. 250.000',
                             ),
                             Text(
                               '✅Suku Bunga 2%',
@@ -126,13 +132,13 @@ class TabunganDesktop extends StatelessWidget {
                               '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah non perorangan yang merupakan lembaga jasa keuangan /bank',
                             ),
                             Text(
-                              '✅Setoran awal Rp. 1.000.000, setoran selanjutnya minimal Rp. 10.000 ',
+                              '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 50.000 ',
                             ),
                             Text(
-                              '✅Saldo mengendap Rp. 250.000',
+                              '✅Saldo mengendap Rp. 50.000',
                             ),
                             Text(
-                              '✅Suku Bunga 2%',
+                              '✅Suku Bunga 1%',
                             ),
                           ],
                         ),

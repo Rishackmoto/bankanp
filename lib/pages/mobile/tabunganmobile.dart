@@ -41,10 +41,13 @@ class TabunganMobile extends StatelessWidget {
                   '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah perorangan dan non perorangan',
                 ),
                 const Text(
-                  '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 10.000 ',
+                  '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 50.000 ',
                 ),
                 const Text(
                   '✅Saldo mengendap Rp. 50.000',
+                ),
+                const Text(
+                  '✅Suku Bunga 1%',
                 ),
                 const SizedBox(
                   height: 10,
@@ -60,7 +63,10 @@ class TabunganMobile extends StatelessWidget {
                   '✅Setoran awal Rp. 20.000, setoran selanjutnya minimal Rp. 10.000 ',
                 ),
                 const Text(
-                  '✅Saldo mengendap Rp. 20.000',
+                  '✅Saldo mengendap Rp. 10.000',
+                ),
+                const Text(
+                  '✅Suku Bunga 1%',
                 ),
                 const SizedBox(
                   height: 10,
@@ -73,10 +79,10 @@ class TabunganMobile extends StatelessWidget {
                   '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah perorangan dan non perorangan',
                 ),
                 const Text(
-                  '✅Setoran awal Rp. 50.000, setoran selanjutnya minimal Rp. 250.000 ',
+                  '✅Setoran awal Rp. 50.000.000, setoran selanjutnya minimal Rp. 250.000 ',
                 ),
                 const Text(
-                  '✅Saldo mengendap Rp. 20.000',
+                  '✅Saldo mengendap Rp. 250.000',
                 ),
                 const Text(
                   '✅Suku Bunga 2%',
@@ -92,13 +98,13 @@ class TabunganMobile extends StatelessWidget {
                   '✅Tabungan dengan mata uang rupiah yang diberikan kepada nasabah non perorangan yang merupakan lembaga jasa keuangan /bank',
                 ),
                 const Text(
-                  '✅Setoran awal Rp. 1.000.000, setoran selanjutnya minimal Rp. 10.000 ',
+                  '✅Setoran awal Rp. 100.000, setoran selanjutnya minimal Rp. 50.000 ',
                 ),
                 const Text(
-                  '✅Saldo mengendap Rp. 250.000',
+                  '✅Saldo mengendap Rp. 50.000',
                 ),
                 const Text(
-                  '✅Suku Bunga 2%',
+                  '✅Suku Bunga 1%',
                 ),
                 const SizedBox(
                   height: 10,
