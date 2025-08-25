@@ -1,0 +1,34 @@
+name: Deploy Flutter Web to Niagahoster
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.3' # sesuaikan dengan versi Flutter kamu
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Flutter Web
+        run: flutter build web --release
+
+      - name: Deploy to Niagahoster via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: build/web
+          server-dir: /public_html/bankanp/
