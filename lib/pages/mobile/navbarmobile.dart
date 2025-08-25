@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:website/main.dart';
 import 'package:website/pages/mobile/homeiklanpenjualanmobile.dart';
 import 'package:website/pages/mobile/kontakmobilde.dart';
 import 'package:website/pages/mobile/laporanmobile.dart';
@@ -26,10 +25,6 @@ class NavbarMobile extends StatelessWidget {
         ),
         onTap: () {
           Navigator.pop(context); // tutup dialog / halaman sekarang
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const HomePage()),
-          );
         },
       ),
       actions: [
