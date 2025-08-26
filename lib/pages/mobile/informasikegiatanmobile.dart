@@ -80,7 +80,7 @@ class _InformasiKegiatanMobileState extends State<InformasiKegiatanMobile> {
                               SizedBox(height: 10),
                               Text(
                                 textAlign: TextAlign.justify,
-                                'TJangan lewatkan update terbaru seputar layanan, promo, dan tips keuangan.',
+                                'Jangan lewatkan update terbaru seputar layanan, promo, dan tips keuangan.',
                               ),
                               Text(
                                 textAlign: TextAlign.justify,
