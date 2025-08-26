@@ -11,7 +11,7 @@ class PengaduanResponsive extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
 
     final isMobile = screenWidth < 600;
-    final isTablet = screenWidth > 600 && screenWidth < 1100;
+    final isTablet = screenWidth < 1100;
     final isDesktop = screenWidth > 1100;
 
     return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [

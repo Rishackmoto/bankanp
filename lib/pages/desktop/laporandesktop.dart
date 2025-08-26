@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:website/pages/desktop/navbardesktop.dart';
 
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/pdfiframeviewer.dart';
-import 'package:website/pages/responsivenavbar.dart';
 
 class LaporanDesktop extends StatelessWidget {
   const LaporanDesktop({super.key});
@@ -15,7 +15,7 @@ class LaporanDesktop extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(80),
-        child: ResponsiveNavbar(),
+        child: NavbarDesktop(),
       ),
       body: DefaultTabController(
         length: 4,
@@ -81,13 +81,13 @@ class LaporanDesktop extends StatelessWidget {
                                   'tahun': '2025',
                                   'judul': 'Triwulan I',
                                   'pdf':
-                                      'https://file.rishackmoto.com/files/TW12025.pdf'
+                                      'https://bankanp.com/files/labul/TW12025.pdf'
                                 },
                                 {
                                   'tahun': '2025',
                                   'judul': 'Triwulan II',
                                   'pdf':
-                                      'https://file.rishackmoto.com/files/TW22025.pdf'
+                                      'https://bankanp.com/files/labul/TW22025.pdf'
                                 },
                                 {
                                   'tahun': '2025',

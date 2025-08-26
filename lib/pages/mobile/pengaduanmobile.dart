@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:website/pages/mobile/navbarmobile.dart';
 
 class PengaduanNasabahMobile extends StatefulWidget {
   const PengaduanNasabahMobile({super.key});
@@ -99,7 +99,7 @@ class _PengaduanNasabahMobileState extends State<PengaduanNasabahMobile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50), child: ResponsiveNavbar()),
+          preferredSize: Size.fromHeight(50), child: NavbarMobile()),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

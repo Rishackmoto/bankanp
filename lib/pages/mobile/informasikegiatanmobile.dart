@@ -2,19 +2,19 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // ✅ buat rootBundle
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/desktop/detailjaminandesktop.dart';
+import 'package:website/pages/desktop/detailinformasidesktop.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/mobile/navbarmobile.dart';
 
-class Homeiklanpenjualanmobile extends StatefulWidget {
-  const Homeiklanpenjualanmobile({super.key});
+class InformasiKegiatanMobile extends StatefulWidget {
+  const InformasiKegiatanMobile({super.key});
 
   @override
-  State<Homeiklanpenjualanmobile> createState() =>
-      _HomeiklanpenjualanmobileState();
+  State<InformasiKegiatanMobile> createState() =>
+      _InformasiKegiatanMobileState();
 }
 
-class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
+class _InformasiKegiatanMobileState extends State<InformasiKegiatanMobile> {
   String selectedCategory = "Semua";
   List<dynamic> jaminanList = [];
 
@@ -27,7 +27,7 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
   // 🔎 Load JSON dari assets/json
   Future<void> loadJaminanData() async {
     final String response =
-        await rootBundle.loadString('assets/json/jaminan.json');
+        await rootBundle.loadString('assets/json/informasi.json');
     final data = json.decode(response);
 
     setState(() {
@@ -46,7 +46,7 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(50),
+        preferredSize: Size.fromHeight(80),
         child: NavbarMobile(),
       ),
       body: jaminanList.isEmpty
@@ -55,37 +55,44 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
               child: Column(
                 children: [
                   // Bagian Header
-
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Lelang & Penjualan Jaminan – Transparan, Mudah, dan Terpercaya',
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 35,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Lottie.asset(
+                        'assets/lottie/news.json',
+                        height: MediaQuery.sizeOf(context).height / 2.2,
+                      ),
+                      const SizedBox(width: 10),
+                      SizedBox(
+                        width: MediaQuery.sizeOf(context).width / 2,
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Temukan Berita, Dapatkan Inspirasi! ✨',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 35,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                textAlign: TextAlign.justify,
+                                'TJangan lewatkan update terbaru seputar layanan, promo, dan tips keuangan.',
+                              ),
+                              Text(
+                                textAlign: TextAlign.justify,
+                                'Klik, baca, dan bagikan informasi penting ini ke orang-orang yang perlu tahu!',
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Text(
-                          textAlign: TextAlign.justify,
-                          'Temukan berbagai aset menarik dari proses lelang dan penjualan jaminan.',
-                        ),
-                        Text(
-                          textAlign: TextAlign.justify,
-                          'Kami hadir dengan sistem yang terbuka, mudah diikuti, dan terpercaya, sehingga Anda dapat menemukan peluang terbaik sesuai kebutuhan Anda.',
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 10),
-                  Lottie.asset(
-                    'assets/lottie/lelang.json',
-                    height: MediaQuery.sizeOf(context).height / 2.2,
-                  ),
+
                   const SizedBox(height: 30),
 
                   // 🔎 Filter kategori
@@ -95,12 +102,9 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
                     runSpacing: 10,
                     children: [
                       "Semua",
-                      "Rumah",
-                      "Mobil",
-                      "Tanah",
-                      "Ruko",
-                      "Apartemen",
-                      "Motor"
+                      "Informasi",
+                      "Berita",
+                      "Kegiatan",
                     ].map((cat) {
                       return ChoiceChip(
                         label: Text(cat),
@@ -182,7 +186,7 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
                                         ),
                                         const SizedBox(height: 5),
                                         Text(
-                                          "Harga Awal: ${item["price"]}",
+                                          "Tgl. Kegiatan: ${item["tgl"]}",
                                           style: const TextStyle(
                                             color: Colors.grey,
                                             fontSize: 14,
@@ -195,9 +199,9 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    DetailJaminanPage(
+                                                    DetailInformasi(
                                                   title: item["title"],
-                                                  price: item["price"],
+                                                  tgl: item["tgl"],
                                                   desc: item["desc"],
                                                   images: List<String>.from(
                                                       item["images"]),

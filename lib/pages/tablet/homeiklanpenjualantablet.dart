@@ -4,7 +4,7 @@ import 'package:flutter/services.dart'; // ✅ buat rootBundle
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/desktop/detailjaminandesktop.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:website/pages/tablet/navbartablet.dart';
 
 class Homeiklanpenjualantablet extends StatefulWidget {
   const Homeiklanpenjualantablet({super.key});
@@ -47,7 +47,7 @@ class _HomeiklanpenjualantabletState extends State<Homeiklanpenjualantablet> {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(50),
-        child: ResponsiveNavbar(),
+        child: NavbarTablet(),
       ),
       body: jaminanList.isEmpty
           ? const Center(child: CircularProgressIndicator()) // loading dulu

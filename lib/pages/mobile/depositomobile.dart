@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/responsivenavbar.dart';
+import 'package:website/pages/mobile/navbarmobile.dart';
 
 class DepositoMobile extends StatelessWidget {
   const DepositoMobile({super.key});
@@ -10,7 +10,7 @@ class DepositoMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50), child: ResponsiveNavbar()),
+          preferredSize: Size.fromHeight(50), child: NavbarMobile()),
       body: SingleChildScrollView(
           child: Column(
         children: [

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // ✅ buat rootBundle
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/desktop/detailjaminandesktop.dart';
+import 'package:website/pages/desktop/navbardesktop.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/responsivenavbar.dart';
 
 class Homeiklanpenjualandesktop extends StatefulWidget {
   const Homeiklanpenjualandesktop({super.key});
@@ -47,7 +47,7 @@ class _HomeiklanpenjualandesktopState extends State<Homeiklanpenjualandesktop> {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(80),
-        child: ResponsiveNavbar(),
+        child: NavbarDesktop(),
       ),
       body: jaminanList.isEmpty
           ? const Center(child: CircularProgressIndicator()) // loading dulu

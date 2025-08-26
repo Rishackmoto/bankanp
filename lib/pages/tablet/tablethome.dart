@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
+import 'package:website/pages/tablet/footertablet.dart';
 import 'package:website/pages/tablet/navbartablet.dart';
 import 'package:website/pages/tampilanutamaresponsive.dart';
 
@@ -24,7 +24,7 @@ class TabletHomePage extends StatelessWidget {
               ),
               const TampilanUtamaResponsive(),
               const ListInformasiResponsive(),
-              const FooterResponsive(),
+              const FooterTablet(),
             ],
           ),
         ));

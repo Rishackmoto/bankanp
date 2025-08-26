@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:website/main.dart';
-import 'package:website/pages/desktop/homeiklanpenjualandesktop.dart';
-import 'package:website/pages/desktop/kontakdesktop.dart';
-import 'package:website/pages/desktop/laporandesktop.dart';
-import 'package:website/pages/desktop/pengaduandesktop.dart';
-
-import 'package:website/pages/desktop/tentangdesktop.dart';
 
 class NavbarDesktop extends StatelessWidget {
   const NavbarDesktop({super.key});
@@ -40,60 +35,45 @@ class NavbarDesktop extends StatelessWidget {
               HoverText(
                 label: 'Tentang kami',
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const TentangDesktop(),
-                      ));
+                  context.go('/tentang'); // dari go_router
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Laporan',
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LaporanDesktop(),
-                      ));
+                  context.go('/laporan'); // dari go_router
                 },
               ),
               const SizedBox(width: 20),
-              const HoverText(label: 'Berita dan Informasi'),
+              HoverText(
+                label: 'Berita & Informasi',
+                onTap: () {
+                  context.go('/informasi'); // dari go_router
+                },
+              ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Pengaduan',
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const PengaduanNasabahDesktop(),
-                      ));
+                  context.go('/pengaduan'); // dari go_router
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Kontak Kami',
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const KontakDesktop(),
-                      ));
+                  context.go('/kontak'); // dari go_router
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Lelang/Jual',
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Homeiklanpenjualandesktop(),
-                      ));
+                  context.go('/lelang'); // dari go_router
                 },
               ),
-              const SizedBox(width: 20)
+              const SizedBox(width: 20),
             ],
           ),
         ],

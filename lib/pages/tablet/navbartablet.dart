@@ -15,7 +15,6 @@ class NavbarTablet extends StatelessWidget {
     return AppBar(
       flexibleSpace: const Image(
         image: AssetImage('assets/images/ornamen.png'),
-        height: 70,
         fit: BoxFit.cover,
       ),
       backgroundColor: const Color(0xFF122F56),

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/listutamadesktop.dart';
-import 'package:website/pages/mobile/listutamamobile.dart';
-import 'package:website/pages/tablet/listutamatablet.dart';
+import 'package:website/pages/desktop/homeiklanpenjualandesktop.dart';
+import 'package:website/pages/desktop/informasikegiatandesktop.dart';
 
-class ListInformasiResponsive extends StatelessWidget {
-  const ListInformasiResponsive({super.key});
+class InformasiResponsive extends StatelessWidget {
+  const InformasiResponsive({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +15,11 @@ class ListInformasiResponsive extends StatelessWidget {
 
     return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
       if (isMobile)
-        const ListInformasiMobile()
+        const InformasiKegiatanDesktop()
       else if (isTablet)
-        const ListInformasiTablet()
+        const InformasiKegiatanDesktop()
       else if (isDesktop)
-        const ListInformasi()
+        const Homeiklanpenjualandesktop()
     ]);
   }
 }

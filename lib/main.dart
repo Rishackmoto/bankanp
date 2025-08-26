@@ -4,6 +4,7 @@ import 'package:website/pages/desktop/desktophome.dart';
 import 'package:website/pages/mobile/mobilehome.dart';
 import 'package:website/pages/tablet/tablethome.dart';
 import 'package:website/responsive.dart';
+import 'app_router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      title: 'BANK ANP',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)),
-      home: const HomePage(),
+      routerConfig: router,
     );
   }
 }
