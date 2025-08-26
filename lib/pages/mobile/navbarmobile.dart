@@ -43,7 +43,7 @@ class NavbarMobile extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const LaporanMobile()));
-            } else if (value == 'Berita & Informasi') {
+            } else if (value == 'Berita') {
               Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -74,7 +74,8 @@ class NavbarMobile extends StatelessWidget {
             const PopupMenuItem(value: 'Tentang', child: Text('Tentang Kami')),
             // const PopupMenuItem(value: 'Produk', child: Text('Produk')),
             const PopupMenuItem(value: 'Laporan', child: Text('Laporan')),
-            const PopupMenuItem(value: 'Berita', child: Text('Berita')),
+            const PopupMenuItem(
+                value: 'Berita', child: Text('Berita & Informasi')),
             const PopupMenuItem(value: 'Pengaduan', child: Text('Pengaduan')),
             const PopupMenuItem(value: 'Kontak', child: Text('Kontak')),
             const PopupMenuItem(
