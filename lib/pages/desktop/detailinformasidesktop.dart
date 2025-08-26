@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DetailInformasi extends StatelessWidget {
   final String title;
-  final DateTime tgl;
+  final String tgl;
   final String desc;
   final List<String> images;
 
