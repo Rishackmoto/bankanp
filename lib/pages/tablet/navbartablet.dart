@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:website/main.dart';
 import 'package:website/pages/mobile/loginmobile.dart';
 import 'package:website/pages/tablet/homeiklanpenjualantablet.dart';
+import 'package:website/pages/tablet/informasikegiatantablet.dart';
 import 'package:website/pages/tablet/kontaktablet.dart';
 import 'package:website/pages/tablet/laporantablet.dart';
 import 'package:website/pages/tablet/pengaduantablet.dart';
@@ -47,7 +48,11 @@ class NavbarTablet extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const LaporanTablet()));
-            } else if (value == 'Berita') {
+            } else if (value == 'Berita & Informasi') {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const InformasiKegiatanTablet()));
             } else if (value == 'Pengaduan') {
               Navigator.push(
                   context,

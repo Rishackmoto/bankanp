@@ -16,22 +16,22 @@ class InformasiKegiatanTablet extends StatefulWidget {
 
 class _InformasiKegiatanTabletState extends State<InformasiKegiatanTablet> {
   String selectedCategory = "Semua";
-  List<dynamic> jaminanList = [];
+  List<dynamic> kegiatanList = [];
 
   @override
   void initState() {
     super.initState();
-    loadJaminanData();
+    loadKegiatanData();
   }
 
   // 🔎 Load JSON dari assets/json
-  Future<void> loadJaminanData() async {
+  Future<void> loadKegiatanData() async {
     final String response =
         await rootBundle.loadString('assets/json/informasi.json');
     final data = json.decode(response);
 
     setState(() {
-      jaminanList = data;
+      kegiatanList = data;
     });
   }
 
@@ -39,8 +39,8 @@ class _InformasiKegiatanTabletState extends State<InformasiKegiatanTablet> {
   Widget build(BuildContext context) {
     // 🔎 Filter data sesuai kategori
     final filteredList = selectedCategory == "Semua"
-        ? jaminanList
-        : jaminanList
+        ? kegiatanList
+        : kegiatanList
             .where((item) => item["category"] == selectedCategory)
             .toList();
 
@@ -49,7 +49,7 @@ class _InformasiKegiatanTabletState extends State<InformasiKegiatanTablet> {
         preferredSize: Size.fromHeight(80),
         child: NavbarTablet(),
       ),
-      body: jaminanList.isEmpty
+      body: kegiatanList.isEmpty
           ? const Center(child: CircularProgressIndicator()) // loading dulu
           : SingleChildScrollView(
               child: Column(
@@ -120,7 +120,7 @@ class _InformasiKegiatanTabletState extends State<InformasiKegiatanTablet> {
 
                   const SizedBox(height: 30),
 
-                  // Grid Daftar Jaminan
+                  // Grid Daftar Informasi
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 50),
                     child: LayoutBuilder(

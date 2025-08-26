@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/pages/mobile/homeiklanpenjualanmobile.dart';
+import 'package:website/pages/mobile/informasikegiatanmobile.dart';
 import 'package:website/pages/mobile/kontakmobilde.dart';
 import 'package:website/pages/mobile/laporanmobile.dart';
 import 'package:website/pages/mobile/loginmobile.dart';
@@ -42,7 +43,11 @@ class NavbarMobile extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const LaporanMobile()));
-            } else if (value == 'Berita') {
+            } else if (value == 'Berita & Informasi') {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const InformasiKegiatanMobile()));
             } else if (value == 'Pengaduan') {
               Navigator.push(
                   context,
