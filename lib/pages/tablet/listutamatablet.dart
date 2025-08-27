@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/desktop/kreditdesk.dart';
 import 'package:website/pages/tablet/depositotablet.dart';
+import 'package:website/pages/tablet/informasikegiatantablet.dart';
 import 'package:website/pages/tablet/kontaktablet.dart';
 import 'package:website/pages/tablet/kredittablet.dart';
 import 'package:website/pages/tablet/laporantablet.dart';
@@ -369,7 +369,7 @@ class ListInformasiTablet extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const KreditDesktop(),
+                    builder: (context) => const InformasiKegiatanTablet(),
                   ));
             },
             child: Column(

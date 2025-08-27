@@ -48,7 +48,7 @@ class NavbarTablet extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const LaporanTablet()));
-            } else if (value == 'Berita & Informasi') {
+            } else if (value == 'Berita') {
               Navigator.push(
                   context,
                   MaterialPageRoute(

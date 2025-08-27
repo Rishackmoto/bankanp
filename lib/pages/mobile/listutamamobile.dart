@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:website/pages/desktop/kreditdesk.dart';
 import 'package:website/pages/desktop/laporandesktop.dart';
 import 'package:website/pages/mobile/depositomobile.dart';
+import 'package:website/pages/mobile/informasikegiatanmobile.dart';
 import 'package:website/pages/mobile/kontakmobilde.dart';
 import 'package:website/pages/mobile/kreditmobile.dart';
 import 'package:website/pages/mobile/pengaduanmobile.dart';
@@ -445,7 +445,8 @@ class ListInformasiMobile extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const KreditDesktop(),
+                            builder: (context) =>
+                                const InformasiKegiatanMobile(),
                           ));
                     },
                     child: Row(

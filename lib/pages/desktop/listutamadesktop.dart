@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/desktop/depositodesk.dart';
+import 'package:website/pages/desktop/informasikegiatandesktop.dart';
 import 'package:website/pages/desktop/kontakdesktop.dart';
 import 'package:website/pages/desktop/kreditdesk.dart';
 import 'package:website/pages/desktop/laporandesktop.dart';
@@ -348,7 +349,7 @@ class ListInformasi extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const KreditDesktop(),
+                      builder: (context) => const InformasiKegiatanDesktop(),
                     ));
               },
               child: Column(

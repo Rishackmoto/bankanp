@@ -56,6 +56,16 @@
       "https://bankanp.com/files/lelang/surya14.jpeg",
       "https://bankanp.com/files/lelang/surya15.jpeg"
     ]
+  },
+  {
+    "image": "https://bankanp.com/files/lelang/RumahDokV1.jpeg",
+    "title": "Rumah Dok 5 Atas Depan Gereja Paulus, Jayapura Utara",
+    "price": "Rp 795.000.000",
+    "category": "Rumah",
+    "desc": "Luas Tanah 179 M/segi, 3 Kamar Tidur dan 2 Kamar Mandi.",
+    "images": [
+      "https://bankanp.com/files/lelang/RumahDokV2.jpeg",
+      "https://bankanp.com/files/lelang/RumahDokV3.jpeg.jpg"
+    ]
   }
-  
 ]

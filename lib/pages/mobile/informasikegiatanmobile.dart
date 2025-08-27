@@ -46,7 +46,7 @@ class _InformasiKegiatanMobileState extends State<InformasiKegiatanMobile> {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(80),
+        preferredSize: Size.fromHeight(50),
         child: NavbarMobile(),
       ),
       body: kegiatanList.isEmpty
@@ -54,45 +54,35 @@ class _InformasiKegiatanMobileState extends State<InformasiKegiatanMobile> {
           : SingleChildScrollView(
               child: Column(
                 children: [
-                  // Bagian Header
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Lottie.asset(
-                        'assets/lottie/news.json',
-                        height: MediaQuery.sizeOf(context).height / 2.2,
-                      ),
-                      const SizedBox(width: 10),
-                      SizedBox(
-                        width: MediaQuery.sizeOf(context).width / 2,
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Temukan Berita, Dapatkan Inspirasi! ✨',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 35,
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                textAlign: TextAlign.justify,
-                                'Jangan lewatkan update terbaru seputar layanan, promo, dan tips keuangan.',
-                              ),
-                              Text(
-                                textAlign: TextAlign.justify,
-                                'Klik, baca, dan bagikan informasi penting ini ke orang-orang yang perlu tahu!',
-                              ),
-                            ],
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Temukan Berita, Dapatkan Inspirasi! ✨',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35,
                           ),
                         ),
-                      ),
-                    ],
+                        SizedBox(height: 10),
+                        Text(
+                          textAlign: TextAlign.justify,
+                          'Jangan lewatkan update terbaru seputar layanan, promo, dan tips keuangan.',
+                        ),
+                        Text(
+                          textAlign: TextAlign.justify,
+                          'Klik, baca, dan bagikan informasi penting ini ke orang-orang yang perlu tahu!',
+                        ),
+                      ],
+                    ),
                   ),
-
+                  const SizedBox(width: 10), // Bagian Header
+                  Lottie.asset(
+                    'assets/lottie/news.json',
+                    height: MediaQuery.sizeOf(context).height / 2.2,
+                  ),
                   const SizedBox(height: 30),
 
                   // 🔎 Filter kategori
