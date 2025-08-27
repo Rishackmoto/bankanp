@@ -68,5 +68,36 @@
       "https://bankanp.com/files/lelang/RumahDokV2.jpeg",
       "https://bankanp.com/files/lelang/RumahDokV3.jpeg"
     ]
+  },
+  {
+    "image": "https://bankanp.com/files/lelang/TanahLuisPontoh8.jpeg",
+    "title": "Tanah Perkebunan, Koya Barat, Kec. Muara Tami",
+    "price": "Rp 600.000.000",
+    "category": "Tanah",
+    "desc": "Luas Tanah 5.336 M/segi, Lokasi Strategis.",
+    "images": [
+      "https://bankanp.com/files/lelang/TanahLuisPontoh1.jpeg",
+      "https://bankanp.com/files/lelang/TanahLuisPontoh2.jpeg",
+      "https://bankanp.com/files/lelang/TanahLuisPontoh3.jpeg",
+      "https://bankanp.com/files/lelang/TanahLuisPontoh4.jpeg",
+      "https://bankanp.com/files/lelang/TanahLuisPontoh5.jpeg",
+      "https://bankanp.com/files/lelang/TanahLuisPontoh6.jpeg",
+      "https://bankanp.com/files/lelang/TanahLuisPontoh7.jpeg",
+      "https://bankanp.com/files/lelang/TanahLuisPontoh8.jpeg"
+    ]
+  }, {
+    "image": "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam1.jpeg",
+    "title": "Tanah Kosong, Koya Barat, Kec. Muara Tami",
+    "price": "Rp 150.000 / Meter",
+    "category": "Tanah",
+    "desc": "Luas Tanah 30.650 M/segi, Lokasi Strategis.",
+    "images": [
+      "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam1.jpg",
+      "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam2.jpeg",
+      "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam3.jpeg",
+      "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam4.jpeg",
+      "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam5.jpeg",
+      "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam6.jpeg"
+    ]
   }
 ]
