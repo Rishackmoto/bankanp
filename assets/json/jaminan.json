@@ -2,7 +2,7 @@
   {
     "image": "https://bankanp.com/files/lelang/perumnasI.jpeg",
     "title": "Rumah 2 kopel di Perumnas I Waena",
-    "price": "Rp 1.000.000.000",
+    "price": "Rp 800.000.000",
     "category": "Rumah",
     "desc": "Rumah minimalis strategis dekat pusat kota Jayapura.",
     "images": [
@@ -24,7 +24,7 @@
   {
     "image": "https://bankanp.com/files/lelang/mokar1.jpeg",
     "title": "Rumah 2 Lantai dekat Hotel Musi, Entrop",
-    "price": "Rp 628.000.000",
+    "price": "Rp 800.000.000",
     "category": "Rumah",
     "desc": "Rumah 2 lantai cocok untuk kos-kosan.",
     "images": [
@@ -100,7 +100,7 @@
   {
     "image": "https://bankanp.com/files/lelang/TanahAbdulMalikHoltekam1.jpeg",
     "title": "Tanah Kosong, Koya Barat, Kec. Muara Tami",
-    "price": "Rp 150.000 / M/segi",
+    "price": "Rp 125.000 / M/segi",
     "category": "Tanah",
     "desc": "Luas Tanah 30.650 M/segi, Lokasi Strategis.",
     "images": [
@@ -120,7 +120,6 @@
     "desc": "Luas Tanah 133 M/segi, 2 Kamar Tidur dan 1 Kamar Mandi.",
     "images": [
       "https://bankanp.com/files/lelang/Yulaikah1.jpeg",
-      "https://bankanp.com/files/lelang/Yulaikah2.jpeg",
       "https://bankanp.com/files/lelang/Yulaikah3.jpeg",
       "https://bankanp.com/files/lelang/Yulaikah4.jpeg",
       "https://bankanp.com/files/lelang/Yulaikah5.jpeg",
@@ -130,6 +129,17 @@
       "https://bankanp.com/files/lelang/Yulaikah9.jpeg",
       "https://bankanp.com/files/lelang/Yulaikah10.jpeg",
       "https://bankanp.com/files/lelang/Yulaikah11.jpeg"
+    ]
+  },
+  {
+    "image": "https://bankanp.com/files/lelang/Yohanbonay2.jpg",
+    "title": "2 Unit Rumah BTN Efata Sinar Permai, Sentani",
+    "price": "Rp 150.000.000 / unit",
+    "category": "Rumah",
+    "desc": "Luas Tanah 36 M/segi, 2 Kamar Tidur dan 1 Kamar Mandi.",
+    "images": [
+      "https://bankanp.com/files/lelang/Yohanbonay2.jpg",
+      "https://bankanp.com/files/lelang/Yohanbonay3.jpg"
     ]
   }
 ]
