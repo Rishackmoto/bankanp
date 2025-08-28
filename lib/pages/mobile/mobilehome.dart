@@ -23,7 +23,6 @@ class HomePageMobile extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               const TampilanUtamaResponsive(),
-              const Text('Uji Coba'),
               const ListInformasiMobile(),
               const Footermobile()
             ],
