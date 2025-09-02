@@ -14,18 +14,21 @@ class HomePageDesktop extends StatelessWidget {
           preferredSize: Size.fromHeight(80), child: NavbarDesktop()),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              // CarouselResponsive(),
-              Image.asset(
-                'assets/images/brolandscap.png',
-                fit: BoxFit.cover,
-              ),
-              const TampilanUtamaResponsive(),
-              const ListInformasiResponsive(),
-              const Footerdesktop(),
-            ],
+          child: Container(
+            color: Colors.white,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                // CarouselResponsive(),
+                Image.asset(
+                  'assets/images/80hut_desktops.png',
+                  fit: BoxFit.cover,
+                ),
+                const TampilanUtamaResponsive(),
+                const ListInformasiResponsive(),
+                const Footerdesktop(),
+              ],
+            ),
           ),
         ),
       ),

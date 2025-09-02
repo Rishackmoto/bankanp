@@ -19,7 +19,7 @@ class HomePageMobile extends StatelessWidget {
             children: [
               // CarouselResponsive(),
               Image.asset(
-                'assets/images/bropotrait.png',
+                'assets/images/80hut_mobile.png',
                 fit: BoxFit.cover,
               ),
               const TampilanUtamaResponsive(),

@@ -19,7 +19,7 @@ class TabletHomePage extends StatelessWidget {
             children: [
               // CarouselResponsive(),
               Image.asset(
-                'assets/images/brolandscap.png',
+                'assets/images/80hut_desktops.png',
                 fit: BoxFit.cover,
               ),
               const TampilanUtamaResponsive(),
