@@ -4,6 +4,7 @@ import 'package:website/pages/mobile/informasikegiatanmobile.dart';
 import 'package:website/pages/mobile/kontakmobilde.dart';
 import 'package:website/pages/mobile/laporanmobile.dart';
 import 'package:website/pages/mobile/loginmobile.dart';
+import 'package:website/pages/mobile/mobilehome.dart';
 import 'package:website/pages/mobile/pengaduanmobile.dart';
 import 'package:website/pages/mobile/tentangmobile.dart';
 
@@ -25,7 +26,10 @@ class NavbarMobile extends StatelessWidget {
           scale: 9,
         ),
         onTap: () {
-          Navigator.pop(context); // tutup dialog / halaman sekarang
+          Navigator.pop(context);
+          MaterialPageRoute(
+              builder: (context) =>
+                  const HomePageMobile()); // tutup dialog / halaman sekarang
         },
       ),
       actions: [

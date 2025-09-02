@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:website/main.dart';
 
 class NavbarDesktop extends StatelessWidget {
   const NavbarDesktop({super.key});
@@ -23,11 +22,7 @@ class NavbarDesktop extends StatelessWidget {
               'assets/images/anp_white.png',
             ),
             onTap: () {
-              Navigator.pop(context); // tutup dialog / halaman sekarang
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const HomePage()),
-              );
+              context.go('/'); // dari go_router
             },
           ),
           Row(
