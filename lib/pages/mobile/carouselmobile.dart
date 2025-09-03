@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class TampilanIklanBerandaMobile extends StatelessWidget {
   final List<String> images = [
-    'assets/images/hariperbarindo.jpeg',
-    'assets/images/kendaraan.png',
+    'assets/images/bropotrait.png',
+    'assets/images/80hut_mobile.png',
     'assets/images/rumah.png',
     'assets/images/umkm.jpg',
     'assets/images/kredit.png',
@@ -16,7 +16,7 @@ class TampilanIklanBerandaMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height / 2,
+        height: MediaQuery.of(context).size.height,
         viewportFraction: 1,
         autoPlay: true,
         enlargeCenterPage: false,
@@ -25,7 +25,7 @@ class TampilanIklanBerandaMobile extends StatelessWidget {
         (e) {
           return Image.asset(
             e,
-            fit: BoxFit.contain,
+            fit: BoxFit.cover,
           );
         },
       ).toList(),

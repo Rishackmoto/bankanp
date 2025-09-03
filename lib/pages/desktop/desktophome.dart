@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/carouselresponsive.dart';
 import 'package:website/pages/desktop/footerdesktop.dart';
 import 'package:website/pages/desktop/navbardesktop.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
@@ -16,17 +17,13 @@ class HomePageDesktop extends StatelessWidget {
         child: SingleChildScrollView(
           child: Container(
             color: Colors.white,
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                // CarouselResponsive(),
-                Image.asset(
-                  'assets/images/80hut_desktops.png',
-                  fit: BoxFit.cover,
-                ),
-                const TampilanUtamaResponsive(),
-                const ListInformasiResponsive(),
-                const Footerdesktop(),
+                CarouselResponsive(),
+                TampilanUtamaResponsive(),
+                ListInformasiResponsive(),
+                Footerdesktop(),
               ],
             ),
           ),

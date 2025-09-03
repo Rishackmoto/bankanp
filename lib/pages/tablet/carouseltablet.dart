@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class TampilanIklanBerandaTablet extends StatelessWidget {
   final List<String> images = [
-    'assets/images/hariperbarindo.jpeg',
-    'assets/images/kendaraan.png',
+    'assets/images/brolandscap.png',
+    'assets/images/80hut_desktops.png',
     'assets/images/rumah.png',
     'assets/images/umkm.jpg',
     'assets/images/iklanstep.png',

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/carouselresponsive.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
 import 'package:website/pages/tablet/footertablet.dart';
 import 'package:website/pages/tablet/navbartablet.dart';
@@ -9,22 +10,18 @@ class TabletHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: const PreferredSize(
+    return const Scaffold(
+        appBar: PreferredSize(
           preferredSize: Size.fromHeight(50),
           child: NavbarTablet(),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              // CarouselResponsive(),
-              Image.asset(
-                'assets/images/80hut_desktops.png',
-                fit: BoxFit.cover,
-              ),
-              const TampilanUtamaResponsive(),
-              const ListInformasiResponsive(),
-              const FooterTablet(),
+              CarouselResponsive(),
+              TampilanUtamaResponsive(),
+              ListInformasiResponsive(),
+              FooterTablet(),
             ],
           ),
         ));
