@@ -16,7 +16,7 @@ class TampilanIklanBerandaTablet extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height / 2,
+        height: MediaQuery.of(context).size.height,
         viewportFraction: 1,
         autoPlay: true,
         enlargeCenterPage: true,

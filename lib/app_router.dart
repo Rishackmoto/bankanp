@@ -1,11 +1,11 @@
 import 'package:go_router/go_router.dart';
+import 'package:website/informasiresponsive.dart';
+import 'package:website/kontakresponsive.dart';
+import 'package:website/laporanresponsive.dart';
 import 'package:website/main.dart';
-import 'package:website/pages/desktop/homeiklanpenjualandesktop.dart';
-import 'package:website/pages/desktop/informasikegiatandesktop.dart';
-import 'package:website/pages/desktop/kontakdesktop.dart';
-import 'package:website/pages/desktop/laporandesktop.dart';
-import 'package:website/pages/desktop/pengaduandesktop.dart';
-import 'package:website/pages/desktop/tentangdesktop.dart';
+import 'package:website/pages/homeiklanpenjualanresponsive.dart';
+import 'package:website/pengaduanresponsive.dart';
+import 'package:website/tentangresponsive.dart';
 
 final GoRouter router = GoRouter(
   routes: [
@@ -15,27 +15,27 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: '/tentang',
-      builder: (context, state) => const TentangDesktop(),
+      builder: (context, state) => const TentangResponsive(),
     ),
     GoRoute(
       path: '/kontak',
-      builder: (context, state) => const KontakDesktop(),
+      builder: (context, state) => const KontakResponsive(),
     ),
     GoRoute(
       path: '/laporan',
-      builder: (context, state) => const LaporanDesktop(),
+      builder: (context, state) => const LaporanResponsive(),
     ),
     GoRoute(
       path: '/pengaduan',
-      builder: (context, state) => const PengaduanNasabahDesktop(),
+      builder: (context, state) => const PengaduanResponsive(),
     ),
     GoRoute(
       path: '/lelang',
-      builder: (context, state) => const Homeiklanpenjualandesktop(),
+      builder: (context, state) => const HomePenjualanResponsive(),
     ),
     GoRoute(
       path: '/informasi',
-      builder: (context, state) => const InformasiKegiatanDesktop(),
+      builder: (context, state) => const InformasiResponsive(),
     ),
   ],
 );

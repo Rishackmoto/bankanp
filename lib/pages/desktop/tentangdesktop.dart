@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:website/pages/desktop/footerdesktop.dart';
 import 'package:website/pages/desktop/navbardesktop.dart';
-import 'package:website/pages/footerresponsive.dart';
 
 class TentangDesktop extends StatelessWidget {
   const TentangDesktop({super.key});
@@ -30,7 +30,6 @@ class TentangDesktop extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: SizedBox(
-                    width: MediaQuery.sizeOf(context).width / 2,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -212,7 +211,7 @@ class TentangDesktop extends StatelessWidget {
               ],
             ),
           ),
-          const FooterResponsive()
+          const Footerdesktop()
         ],
       )),
     );

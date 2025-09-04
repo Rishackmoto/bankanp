@@ -22,7 +22,7 @@ class NavbarDesktop extends StatelessWidget {
               'assets/images/anp_white.png',
             ),
             onTap: () {
-              context.go('/'); // dari go_router
+              context.go('/');
             },
           ),
           Row(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:website/main.dart';
 import 'package:website/pages/mobile/loginmobile.dart';
 import 'package:website/pages/tablet/homeiklanpenjualantablet.dart';
 import 'package:website/pages/tablet/informasikegiatantablet.dart';
@@ -25,7 +26,11 @@ class NavbarTablet extends StatelessWidget {
           scale: 9,
         ),
         onTap: () {
-          Navigator.pop(context); // tutup dialog / halaman sekarang
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const HomePage(),
+              ));
         },
       ),
       actions: [

@@ -5,8 +5,10 @@ import 'package:website/pages/mobile/mobilehome.dart';
 import 'package:website/pages/tablet/tablethome.dart';
 import 'package:website/responsive.dart';
 import 'app_router.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy(); // ⬅️
   runApp(const MyApp());
 }
 
