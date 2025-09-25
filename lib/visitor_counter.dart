@@ -19,7 +19,7 @@ class _VisitorCounterState extends State<VisitorCounter> {
   }
 
   Future<void> _getVisitorCount() async {
-    final url = Uri.parse('https://api.countapi.xyz/hit/bankanp.com/visitors');
+    final url = Uri.parse('https://api.bankanp.com/visitors');
     final response = await http.get(url);
     if (response.statusCode == 200) {
       final data = json.decode(response.body);

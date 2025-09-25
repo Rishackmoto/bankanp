@@ -3,6 +3,9 @@ const cors = require("cors");
 require("dotenv").config();
 const { poolPromise } = require("./db");
 
+// kalau node <18
+const fetch = require('node-fetch'); // ⬅️ tamb
+
 // 🔍 Debug env
 console.log('DB_USER:', process.env.DB_USER);
 console.log('DB_PASSWORD:', process.env.DB_PASSWORD ? '***' : 'Not Set');
