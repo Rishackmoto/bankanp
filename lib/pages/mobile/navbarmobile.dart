@@ -17,6 +17,8 @@ class NavbarMobile extends StatelessWidget {
       flexibleSpace: const Image(
         image: AssetImage('assets/images/ornamen.png'),
         fit: BoxFit.cover,
+        height: 50,
+        width: double.infinity,
       ),
       backgroundColor: const Color(0xFF122F56),
       foregroundColor: Colors.white,

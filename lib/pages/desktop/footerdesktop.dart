@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
+import 'package:website/visitor_counter.dart';
 
 class Footerdesktop extends StatelessWidget {
   const Footerdesktop({
@@ -132,8 +133,12 @@ class Footerdesktop extends StatelessWidget {
                   const SocialMediaButton.whatsapp(
                     color: Colors.white,
                     size: 30,
-                    url: 'https://twitter.com/CipliOnat',
+                    url: 'https://wa.me/6282317739026',
                   ),
+                  const SizedBox(width: 15),
+                  // 👉 ini kita tambahkan
+                  const VisitorCounter(),
+                  // const VisitorCounter()
                 ],
               )
             ],

@@ -8,19 +8,14 @@ class PengaduanResponsive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
 
-    final isMobile = screenWidth < 600;
-    final isTablet = screenWidth < 1100;
-    final isDesktop = screenWidth > 1100;
-
-    return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-      if (isMobile)
-        const PengaduanNasabahMobile()
-      else if (isTablet)
-        const PengaduanNasabahTablet()
-      else if (isDesktop)
-        const PengaduanNasabahDesktop()
-    ]);
+    if (width > 1100) {
+      return const PengaduanNasabahDesktop();
+    } else if (width > 600) {
+      return const PengaduanNasabahTablet();
+    } else {
+      return const PengaduanNasabahMobile();
+    }
   }
 }

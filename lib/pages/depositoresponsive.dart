@@ -8,19 +8,14 @@ class DepositoResponsive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
 
-    final isMobile = screenWidth < 600;
-    final isTablet = screenWidth < 1100;
-    final isDesktop = screenWidth > 1100;
-
-    return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-      if (isMobile)
-        const DepositoMobile()
-      else if (isTablet)
-        const DepositoTablet()
-      else if (isDesktop)
-        const DepositoDesktop()
-    ]);
+    if (width > 1100) {
+      return const DepositoDesktop();
+    } else if (width > 600) {
+      return const DepositoTablet();
+    } else {
+      return const DepositoMobile();
+    }
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/tablet/navbartablet.dart';
+import 'package:website/responsivenavbar.dart';
 
 class KreditTablet extends StatelessWidget {
   const KreditTablet({super.key});
@@ -10,7 +10,7 @@ class KreditTablet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50), child: NavbarTablet()),
+          preferredSize: Size.fromHeight(60), child: ResponsiveNavbar()),
       body: SingleChildScrollView(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

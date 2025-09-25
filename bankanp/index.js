@@ -58,6 +58,17 @@ app.use((req, res, next) => {
 // 📌 Pasang route
 app.use('/pengaduan', pengaduanRoute);
 
+app.get('/visitors', async (req, res) => {
+  try {
+    const resp = await fetch('https://api.countapi.xyz/hit/bankanp.com/visitors');
+    const data = await resp.json();
+    res.json(data);
+  } catch (err) {
+    console.error('Error fetch visitors:', err);
+    res.status(500).json({ error: 'Gagal mengambil data pengunjung' });
+  }
+});
+
 // 🚀 Listener
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

@@ -4,7 +4,7 @@ import 'package:flutter/services.dart'; // ✅ buat rootBundle
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/desktop/detailjaminandesktop.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/mobile/navbarmobile.dart';
+import 'package:website/responsivenavbar.dart';
 
 class Homeiklanpenjualanmobile extends StatefulWidget {
   const Homeiklanpenjualanmobile({super.key});
@@ -46,8 +46,8 @@ class _HomeiklanpenjualanmobileState extends State<Homeiklanpenjualanmobile> {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: NavbarMobile(),
+        preferredSize: Size.fromHeight(60),
+        child: ResponsiveNavbar(),
       ),
       body: jaminanList.isEmpty
           ? const Center(child: CircularProgressIndicator()) // loading dulu

@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/pages/desktop/desktophome.dart';
 import 'package:website/pages/mobile/mobilehome.dart';
+import 'package:website/pages/promoresponsive.dart';
 import 'package:website/pages/tablet/tablethome.dart';
 import 'package:website/responsive.dart';
-import 'app_router.dart';
-import 'package:url_strategy/url_strategy.dart';
 
 void main() {
-  setPathUrlStrategy(); // ⬅️
   runApp(const MyApp());
 }
 
@@ -17,12 +15,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
+      // tambahkan initialRoute & routes
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/promo-anp': (context) => const PromoResponsive(), // 👈 halaman promo
+      },
       title: 'BANK ANP',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)),
-      routerConfig: router,
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
     );
   }
 }

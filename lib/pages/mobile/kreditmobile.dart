@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/mobile/navbarmobile.dart';
+import 'package:website/responsivenavbar.dart';
 
 class KreditMobile extends StatelessWidget {
   const KreditMobile({super.key});
@@ -10,7 +10,7 @@ class KreditMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50), child: NavbarMobile()),
+          preferredSize: Size.fromHeight(60), child: ResponsiveNavbar()),
       body: SingleChildScrollView(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

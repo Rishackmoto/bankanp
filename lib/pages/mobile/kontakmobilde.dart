@@ -3,8 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'dart:ui_web' as ui;
 import 'dart:html';
-
-import 'package:website/pages/mobile/navbarmobile.dart';
+import 'package:website/responsivenavbar.dart';
 
 class KontakMobile extends StatelessWidget {
   const KontakMobile({super.key});
@@ -13,7 +12,7 @@ class KontakMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50), child: NavbarMobile()),
+          preferredSize: Size.fromHeight(60), child: ResponsiveNavbar()),
       body: SingleChildScrollView(
           child: Column(
         children: [

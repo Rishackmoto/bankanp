@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/tablet/navbartablet.dart';
+import 'package:website/responsivenavbar.dart';
 
 class TentangTablet extends StatelessWidget {
   const TentangTablet({super.key});
@@ -9,7 +9,7 @@ class TentangTablet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(50), child: NavbarTablet()),
+          preferredSize: Size.fromHeight(60), child: ResponsiveNavbar()),
       body: SingleChildScrollView(
           child: Column(
         children: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:website/pages/desktop/footerdesktop.dart';
-import 'package:website/pages/desktop/navbardesktop.dart';
+import 'package:website/pages/footerresponsive.dart';
+import 'package:website/responsivenavbar.dart';
 
 class TentangDesktop extends StatelessWidget {
   const TentangDesktop({super.key});
@@ -9,7 +9,7 @@ class TentangDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-          preferredSize: Size.fromHeight(80), child: NavbarDesktop()),
+          preferredSize: Size.fromHeight(90), child: ResponsiveNavbar()),
       body: SingleChildScrollView(
           child: Column(
         children: [
@@ -211,7 +211,7 @@ class TentangDesktop extends StatelessWidget {
               ],
             ),
           ),
-          const Footerdesktop()
+          const FooterResponsive()
         ],
       )),
     );

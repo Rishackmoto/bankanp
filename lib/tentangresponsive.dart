@@ -8,19 +8,14 @@ class TentangResponsive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
 
-    final isMobile = screenWidth < 600;
-    final isTablet = screenWidth > 600 && screenWidth < 1100;
-    final isDesktop = screenWidth > 1100;
-
-    return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-      if (isMobile)
-        const TentangMobile()
-      else if (isTablet)
-        const TentangTablet()
-      else if (isDesktop)
-        const TentangDesktop()
-    ]);
+    if (width > 1100) {
+      return const TentangDesktop();
+    } else if (width > 600) {
+      return const TentangTablet();
+    } else {
+      return const TentangMobile();
+    }
   }
 }

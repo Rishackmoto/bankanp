@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/mobile/navbarmobile.dart';
 import 'package:website/pages/pdfiframeviewer.dart';
+import 'package:website/responsivenavbar.dart';
 
 class LaporanMobile extends StatelessWidget {
   const LaporanMobile({super.key});
@@ -14,8 +14,8 @@ class LaporanMobile extends StatelessWidget {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: NavbarMobile(),
+        preferredSize: Size.fromHeight(60),
+        child: ResponsiveNavbar(),
       ),
       body: DefaultTabController(
         length: 4,

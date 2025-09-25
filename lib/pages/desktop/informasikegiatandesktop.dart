@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // ✅ buat rootBundle
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/desktop/detailinformasidesktop.dart';
-import 'package:website/pages/desktop/navbardesktop.dart';
 import 'package:website/pages/footerresponsive.dart';
+import 'package:website/responsivenavbar.dart';
 
 class InformasiKegiatanDesktop extends StatefulWidget {
   const InformasiKegiatanDesktop({super.key});
@@ -46,8 +46,8 @@ class _InformasiKegiatanDesktopState extends State<InformasiKegiatanDesktop> {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(80),
-        child: NavbarDesktop(),
+        preferredSize: Size.fromHeight(90),
+        child: ResponsiveNavbar(),
       ),
       body: kegiatanList.isEmpty
           ? const Center(child: CircularProgressIndicator()) // loading dulu

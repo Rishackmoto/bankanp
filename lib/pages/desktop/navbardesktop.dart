@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:website/informasiresponsive.dart';
+import 'package:website/kontakresponsive.dart';
+import 'package:website/laporanresponsive.dart';
+import 'package:website/main.dart';
+import 'package:website/pages/homeiklanpenjualanresponsive.dart';
+import 'package:website/pengaduanresponsive.dart';
+import 'package:website/tentangresponsive.dart';
 
 class NavbarDesktop extends StatelessWidget {
   const NavbarDesktop({super.key});
@@ -13,7 +19,7 @@ class NavbarDesktop extends StatelessWidget {
               fit: BoxFit.cover,
               opacity: 0.6),
           color: Color(0xFF122F56)),
-      height: 100,
+      height: 90,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -22,7 +28,11 @@ class NavbarDesktop extends StatelessWidget {
               'assets/images/anp_white.png',
             ),
             onTap: () {
-              context.go('/');
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage(),
+                  ));
             },
           ),
           Row(
@@ -30,42 +40,66 @@ class NavbarDesktop extends StatelessWidget {
               HoverText(
                 label: 'Tentang kami',
                 onTap: () {
-                  context.go('/tentang'); // dari go_router
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TentangResponsive(),
+                      ));
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Laporan',
                 onTap: () {
-                  context.go('/laporan'); // dari go_router
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LaporanResponsive(),
+                      ));
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Berita & Informasi',
                 onTap: () {
-                  context.go('/informasi'); // dari go_router
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const InformasiResponsive(),
+                      ));
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Pengaduan',
                 onTap: () {
-                  context.go('/pengaduan'); // dari go_router
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PengaduanResponsive(),
+                      ));
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Kontak Kami',
                 onTap: () {
-                  context.go('/kontak'); // dari go_router
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const KontakResponsive(),
+                      ));
                 },
               ),
               const SizedBox(width: 20),
               HoverText(
                 label: 'Lelang/Jual',
                 onTap: () {
-                  context.go('/lelang'); // dari go_router
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const HomePenjualanResponsive(),
+                      ));
                 },
               ),
               const SizedBox(width: 20),

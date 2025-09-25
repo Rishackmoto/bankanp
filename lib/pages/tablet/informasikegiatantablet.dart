@@ -4,7 +4,7 @@ import 'package:flutter/services.dart'; // ✅ buat rootBundle
 import 'package:lottie/lottie.dart';
 import 'package:website/pages/desktop/detailinformasidesktop.dart';
 import 'package:website/pages/footerresponsive.dart';
-import 'package:website/pages/tablet/navbartablet.dart';
+import 'package:website/responsivenavbar.dart';
 
 class InformasiKegiatanTablet extends StatefulWidget {
   const InformasiKegiatanTablet({super.key});
@@ -46,8 +46,8 @@ class _InformasiKegiatanTabletState extends State<InformasiKegiatanTablet> {
 
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(50),
-        child: NavbarTablet(),
+        preferredSize: Size.fromHeight(60),
+        child: ResponsiveNavbar(),
       ),
       body: kegiatanList.isEmpty
           ? const Center(child: CircularProgressIndicator()) // loading dulu

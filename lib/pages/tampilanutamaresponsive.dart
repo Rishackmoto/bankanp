@@ -8,19 +8,14 @@ class TampilanUtamaResponsive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
 
-    final isMobile = screenWidth < 600;
-    final isTablet = screenWidth < 1100;
-    final isDesktop = screenWidth > 1100;
-
-    return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-      if (isMobile)
-        const TampilanUtamaMobile()
-      else if (isTablet)
-        const TampilanUtamaTablet()
-      else if (isDesktop)
-        const TampilanUtama()
-    ]);
+    if (width > 1100) {
+      return const TampilanUtama();
+    } else if (width > 600) {
+      return const TampilanUtamaTablet();
+    } else {
+      return const TampilanUtamaMobile();
+    }
   }
 }

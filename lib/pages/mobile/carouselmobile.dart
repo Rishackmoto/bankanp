@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 
 class TampilanIklanBerandaMobile extends StatelessWidget {
   final List<String> images = [
+    'assets/images/hut8mobile.png',
     'assets/images/bropotrait.png',
-    'assets/images/80hut_mobile.png',
-    'assets/images/rumah.png',
-    'assets/images/umkm.jpg',
-    'assets/images/kredit.png',
-    'assets/images/trainingsellingskills.png',
+    'assets/images/MaulidNabiMuhammad2025.png',
+    'assets/images/iklandepositopotrait.png',
   ];
   TampilanIklanBerandaMobile({super.key});
 
@@ -20,6 +18,7 @@ class TampilanIklanBerandaMobile extends StatelessWidget {
         viewportFraction: 1,
         autoPlay: true,
         enlargeCenterPage: false,
+        initialPage: 0,
       ),
       items: images.map(
         (e) {
