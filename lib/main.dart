@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:website/pages/desktop/desktophome.dart';
+import 'package:website/pages/desktop/promo/bik_home.dart';
+import 'package:website/pages/desktop/promo/wheel_promosi.dart';
 import 'package:website/pages/mobile/mobilehome.dart';
 import 'package:website/pages/promoresponsive.dart';
 import 'package:website/pages/tablet/tablethome.dart';
 import 'package:website/responsive.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,13 +16,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'BANK ANP',
       // tambahkan initialRoute & routes
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        '/promo-anp': (context) => const PromoResponsive(), // 👈 halaman promo
+        '/promo-anp': (context) =>
+            const PromoResponsive(), // 👈 halaman promo '
+        '/gamebik': (context) =>
+            const WheelOfKnowledgeApp(), // 👈 halaman promo
+        '/bik2025': (context) => const HomeBIK(), // 👈 halaman promo
       },
-      title: 'BANK ANP',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(
@@ -35,7 +39,6 @@ class MyApp extends StatelessWidget {
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
   @override
   State<HomePage> createState() => _HomePageState();
 }

@@ -141,5 +141,44 @@
       "https://bankanp.com/files/lelang/Yohanbonay1.jpg",
       "https://bankanp.com/files/lelang/Yohanbonay2.jpg"
     ]
+  },
+   {
+    "image": "https://bankanp.com/files/lelang/Tanah1meruke.png",
+    "title": "Tanah Kosong SHM 01984, Merauke",
+    "price": "Rp 258.000.000",
+    "category": "Tanah",
+    "desc": "Luas Tanah 551 M/Segi.",
+    "images": [
+      "https://bankanp.com/files/lelang/Tanah1meruke.png"
+    ]
+  },  {
+    "image": "https://bankanp.com/files/lelang/Tanah2meruke.png",
+    "title": "Tanah Kosong SHM 00254, Merauke",
+    "price": "Rp 285.000.000",
+    "category": "Tanah",
+    "desc": "Luas Tanah 3.358 M/Segi.",
+    "images": [
+      "https://bankanp.com/files/lelang/Tanah2meruke.png"
+    ]
+  },{
+    "image": "https://bankanp.com/files/lelang/Tanah3meruke.png",
+    "title": "Tanah Kosong SHM 00525, Merauke",
+    "price": "Rp 285.000.000",
+    "category": "Tanah",
+    "desc": "Luas Tanah 3.358 M/Segi.",
+    "images": [
+      "https://bankanp.com/files/lelang/Tanah3meruke.png"
+    ]
+  },{
+    "image": "https://bankanp.com/files/lelang/Tanah4meruke.png",
+    "title": "Tanah Kosong SHM 01626, Merauke",
+    "price": "Rp 71.000.000",
+    "category": "Tanah",
+    "desc": "Luas Tanah 360 M/Segi.",
+    "images": [
+      "https://bankanp.com/files/lelang/Tanah4meruke.png"
+    ]
   }
 ]
+
+

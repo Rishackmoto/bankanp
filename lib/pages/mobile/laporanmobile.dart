@@ -18,7 +18,7 @@ class LaporanMobile extends StatelessWidget {
         child: ResponsiveNavbar(),
       ),
       body: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Column(
           children: [
             Expanded(
@@ -62,6 +62,7 @@ class LaporanMobile extends StatelessWidget {
                             Tab(icon: Icon(Icons.gavel), text: 'TATA KELOLA'),
                             Tab(icon: Icon(Icons.eco), text: 'BERKELANJUTAN'),
                             Tab(icon: Icon(Icons.feedback), text: 'PENGADUAN'),
+                            Tab(icon: Icon(Icons.feedback), text: 'LAINNYA'),
                           ],
                         ),
                         const SizedBox(height: 20),
@@ -85,7 +86,8 @@ class LaporanMobile extends StatelessWidget {
                                 {
                                   'tahun': '2025',
                                   'judul': 'Triwulan III',
-                                  'pdf': 'https://example.com/triwulan2.pdf'
+                                  'pdf':
+                                      'https://bankanp.com/files/labul/TW32025.pdf'
                                 },
                               ]),
                               _ListLaporan([
@@ -109,6 +111,14 @@ class LaporanMobile extends StatelessWidget {
                                   'tahun': '2025',
                                   'judul': 'Rekap Pengaduan',
                                   'pdf': 'https://example.com/pengaduan2023.pdf'
+                                },
+                              ]),
+                              _ListLaporan([
+                                {
+                                  'tahun': '2025',
+                                  'judul': 'Piagam Audit Internal',
+                                  'pdf':
+                                      'https://bankanp.com/files/piagam/piagam.pdf'
                                 },
                               ]),
                             ],
@@ -136,7 +146,7 @@ class _Deskripsi extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text(
       textAlign: TextAlign.justify,
-      'Sebagai bentuk komitmen kami terhadap keterbukaan informasi dan tanggung jawab kepada seluruh pemangku kepentingan, Bank Perekenomonian Rakyat (BPR) secara rutin mempublikasikan laporan keuangan dan kinerja perusahaan.',
+      'Sebagai bentuk komitmen kami terhadap keterbukaan informasi dan tanggung jawab kepada seluruh pemangku kepentingan, Bank Perekenomonian Rakyat (BPR) secara rutin mempublikasikan laporan keuangan dan kinerja perusahaan serta laporan-laporan lainnya.',
       style: TextStyle(fontSize: 20),
     );
   }

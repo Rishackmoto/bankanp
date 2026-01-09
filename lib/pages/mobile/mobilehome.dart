@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:website/carouselresponsive.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/mobile/listutamamobile.dart';
+import 'package:website/pages/mobile/smki_mobile.dart';
 import 'package:website/pages/tampilanutamaresponsive.dart';
 import 'package:website/responsivenavbar.dart';
 
@@ -21,6 +22,7 @@ class HomePageMobile extends StatelessWidget {
               CarouselResponsive(),
               TampilanUtamaResponsive(),
               ListInformasiMobile(),
+              SmkiMobile(),
               FooterResponsive(),
             ],
           ),

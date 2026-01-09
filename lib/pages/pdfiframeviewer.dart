@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui_web' as ui; // pengganti dart:ui untuk web
 import 'dart:html' as html;
+import 'dart:math';
 
 class PdfPreviewPage extends StatelessWidget {
   final String pdfUrl;
@@ -9,13 +10,15 @@ class PdfPreviewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String viewType = 'pdf-view';
-    // daftar hanya sekali
+    // viewType unik setiap kali halaman dibuka
+    final uniqueId = 'pdf-view-${Random().nextInt(100000)}';
+
     ui.platformViewRegistry.registerViewFactory(
-      viewType,
+      uniqueId,
       (int viewId) {
         final iframe = html.IFrameElement()
-          ..src = pdfUrl
+          // tambahkan anti-cache juga supaya browser ambil file baru
+          ..src = '$pdfUrl?ts=${DateTime.now().millisecondsSinceEpoch}'
           ..style.border = 'none'
           ..style.width = '100%'
           ..style.height = '100%';
@@ -23,8 +26,14 @@ class PdfPreviewPage extends StatelessWidget {
       },
     );
 
-    return SizedBox.expand(
-      child: HtmlElementView(viewType: viewType),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Preview PDF'),
+        backgroundColor: Colors.blue,
+      ),
+      body: SizedBox.expand(
+        child: HtmlElementView(viewType: uniqueId),
+      ),
     );
   }
 }

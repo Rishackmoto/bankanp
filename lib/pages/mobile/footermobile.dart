@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
-import 'package:website/visitor_counter.dart';
 
 class Footermobile extends StatelessWidget {
   const Footermobile({super.key});
@@ -107,7 +106,6 @@ class Footermobile extends StatelessWidget {
                       ),
                       const SizedBox(width: 15),
                       // 👉 ini kita tambahkan
-                      const VisitorCounter(),
                     ],
                   ),
                 ),

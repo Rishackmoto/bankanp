@@ -1,6 +1,6 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 class VisitorCounter extends StatefulWidget {
   const VisitorCounter({super.key});
@@ -10,30 +10,50 @@ class VisitorCounter extends StatefulWidget {
 }
 
 class _VisitorCounterState extends State<VisitorCounter> {
-  int? _count;
+  int? visitors;
+  bool loading = true;
 
   @override
   void initState() {
     super.initState();
-    _getVisitorCount();
+    fetchVisitors();
   }
 
-  Future<void> _getVisitorCount() async {
-    final url = Uri.parse('https://api.bankanp.com/visitors');
-    final response = await http.get(url);
-    if (response.statusCode == 200) {
-      final data = json.decode(response.body);
+  Future<void> fetchVisitors() async {
+    try {
+      final resp = await http.get(
+        Uri.parse('https://api.countapi.xyz/hit/bankanp.com/visitors'),
+      );
+      if (resp.statusCode == 200) {
+        final data = jsonDecode(resp.body);
+        setState(() {
+          visitors = data['value']; // nilai hit counter
+          loading = false;
+        });
+      } else {
+        setState(() {
+          loading = false;
+        });
+      }
+    } catch (e) {
+      print('Error fetch visitors: $e');
       setState(() {
-        _count = data['value'];
+        loading = false;
       });
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (loading) {
+      return const Text(
+        'Memuat...',
+        style: TextStyle(color: Colors.white),
+      );
+    }
     return Text(
-      _count == null ? 'Memuat...' : 'Jumlah pengunjung: $_count',
-      style: const TextStyle(fontSize: 16),
+      'Pengunjung: ${visitors ?? 0}',
+      style: const TextStyle(color: Colors.white),
     );
   }
 }

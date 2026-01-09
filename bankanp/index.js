@@ -60,7 +60,7 @@ app.use('/pengaduan', pengaduanRoute);
 
 app.get('/visitors', async (req, res) => {
   try {
-    const resp = await fetch('https://api.countapi.xyz/hit/bankanp.com/visitors');
+    const resp = await fetch('https://api.getcountapi.com/hit/bankanp.com/visitors');
     const data = await resp.json();
     res.setHeader('Access-Control-Allow-Origin', '*'); // <—
     res.json(data);

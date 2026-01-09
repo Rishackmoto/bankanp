@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 
 class TampilanIklanBerandaMobile extends StatelessWidget {
   final List<String> images = [
-    'assets/images/hut8mobile.png',
-    'assets/images/bropotrait.png',
-    'assets/images/MaulidNabiMuhammad2025.png',
+    'assets/images/protabokt.png',
+    'assets/images/prokreditokt.png',
     'assets/images/iklandepositopotrait.png',
   ];
   TampilanIklanBerandaMobile({super.key});

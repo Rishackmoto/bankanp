@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_buttons/social_media_buttons.dart';
-import 'package:website/visitor_counter.dart';
 
 class FooterTablet extends StatelessWidget {
   const FooterTablet({
@@ -136,7 +135,6 @@ class FooterTablet extends StatelessWidget {
                 ),
                 const SizedBox(width: 15),
                 // 👉 ini kita tambahkan
-                const VisitorCounter(),
               ],
             )
           ],

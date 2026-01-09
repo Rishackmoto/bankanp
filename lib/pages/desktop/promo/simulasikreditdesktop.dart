@@ -87,7 +87,7 @@ class _SimulasiKreditPageState extends State<SimulasiKreditPage> {
                 Expanded(
                   flex: 1,
                   child: Image.asset(
-                    'assets/images/bropotrait.png',
+                    'assets/images/prokreditokt.png',
                     fit: BoxFit.contain,
                   ),
                 ),

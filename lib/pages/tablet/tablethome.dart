@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:website/carouselresponsive.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
+import 'package:website/pages/tablet/smki_tablet.dart';
 import 'package:website/pages/tampilanutamaresponsive.dart';
 import 'package:website/responsivenavbar.dart';
 
@@ -21,6 +22,7 @@ class TabletHomePage extends StatelessWidget {
               CarouselResponsive(),
               TampilanUtamaResponsive(),
               ListInformasiResponsive(),
+              SmkiTablet(),
               FooterResponsive(),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:website/carouselresponsive.dart';
+import 'package:website/pages/desktop/smki_desktop.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
 import 'package:website/pages/tampilanutamaresponsive.dart';
@@ -23,6 +24,7 @@ class HomePageDesktop extends StatelessWidget {
                 CarouselResponsive(),
                 TampilanUtamaResponsive(),
                 ListInformasiResponsive(),
+                SmkiDesktop(),
                 FooterResponsive(),
               ],
             ),

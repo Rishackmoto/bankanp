@@ -16,9 +16,10 @@ class LaporanDesktop extends StatelessWidget {
         child: ResponsiveNavbar(),
       ),
       body: DefaultTabController(
-        length: 4,
-        child: ListView(
+        length: 5,
+        child: Column(
           children: [
+            // Bagian atas (animasi + deskripsi + tab bar)
             Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -31,7 +32,7 @@ class LaporanDesktop extends StatelessWidget {
                         flex: 1,
                         child: Lottie.asset(
                           'assets/lottie/reportfinance.json',
-                          height: MediaQuery.of(context).size.height / 2,
+                          height: MediaQuery.of(context).size.height / 2.5,
                         ),
                       ),
                       const SizedBox(width: 20),
@@ -51,58 +52,66 @@ class LaporanDesktop extends StatelessWidget {
                       Tab(icon: Icon(Icons.gavel), text: 'TATA KELOLA'),
                       Tab(icon: Icon(Icons.eco), text: 'BERKELANJUTAN'),
                       Tab(icon: Icon(Icons.feedback), text: 'PENGADUAN'),
+                      Tab(icon: Icon(Icons.feedback), text: 'LAINNYA'),
                     ],
-                  ),
-                  const SizedBox(height: 20),
-                  const SizedBox(
-                    height: 500,
-                    child: TabBarView(
-                      children: [
-                        _ListLaporan([
-                          {
-                            'tahun': '2025',
-                            'judul': 'Triwulan I',
-                            'pdf': 'https://bankanp.com/files/labul/TW12025.pdf'
-                          },
-                          {
-                            'tahun': '2025',
-                            'judul': 'Triwulan II',
-                            'pdf': 'https://bankanp.com/files/labul/TW22025.pdf'
-                          },
-                          {
-                            'tahun': '2025',
-                            'judul': 'Triwulan III',
-                            'pdf': 'https://example.com/triwulan2.pdf'
-                          },
-                        ]),
-                        _ListLaporan([
-                          {
-                            'tahun': '2025',
-                            'judul': 'Tata Kelola 2025',
-                            'pdf': 'https://example.com/tatakelola2023.pdf'
-                          },
-                        ]),
-                        _ListLaporan([
-                          {
-                            'tahun': '2025',
-                            'judul': 'Laporan Berkelanjutan',
-                            'pdf': 'https://example.com/berkelanjutan2022.pdf'
-                          },
-                        ]),
-                        _ListLaporan([
-                          {
-                            'tahun': '2025',
-                            'judul': 'Rekap Pengaduan',
-                            'pdf': 'https://example.com/pengaduan2023.pdf'
-                          },
-                        ]),
-                      ],
-                    ),
                   ),
                 ],
               ),
             ),
-            const FooterResponsive()
+
+            // Bagian isi tab
+            const Expanded(
+              child: TabBarView(
+                children: [
+                  _ListLaporan([
+                    {
+                      'tahun': '2025',
+                      'judul': 'Triwulan I',
+                      'pdf': 'https://bankanp.com/files/labul/TW12025.pdf'
+                    },
+                    {
+                      'tahun': '2025',
+                      'judul': 'Triwulan II',
+                      'pdf': 'https://bankanp.com/files/labul/TW22025.pdf'
+                    },
+                    {
+                      'tahun': '2025',
+                      'judul': 'Triwulan III',
+                      'pdf': 'https://bankanp.com/files/labul/TW32025.pdf'
+                    },
+                  ]),
+                  _ListLaporan([]), // kosong
+                  _ListLaporan([]), // kosong
+                  _ListLaporan([
+                    {
+                      'tahun': '2025',
+                      'judul': 'Rekap Pengaduan',
+                      'pdf': 'https://example.com/pengaduan2025.pdf'
+                    },
+                  ]),
+                  _ListLaporan([
+                    {
+                      'tahun': '2025',
+                      'judul': 'Piagam Audit Internal',
+                      'pdf': 'https://bankanp.com/files/piagam/piagam.pdf'
+                    },
+                    {
+                      'tahun': '2025',
+                      'judul': 'Fakta Integritas',
+                      'pdf': 'https://bankanp.com/files/piagam/piagam.pdf'
+                    },
+                    {
+                      'tahun': '2025',
+                      'judul': 'Fakta Integritas',
+                      'pdf': 'https://bankanp.com/files/piagam/piagam.pdf'
+                    },
+                  ]),
+                ],
+              ),
+            ),
+
+            // Footer
+            const FooterResponsive(),
           ],
         ),
       ),
@@ -118,7 +127,10 @@ class _Deskripsi extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text(
       textAlign: TextAlign.justify,
-      'Sebagai bentuk komitmen kami terhadap keterbukaan informasi dan tanggung jawab kepada seluruh pemangku kepentingan, Bank Perekenomonian Rakyat (BPR) secara rutin mempublikasikan laporan keuangan dan kinerja perusahaan.',
+      'Sebagai bentuk komitmen kami terhadap keterbukaan informasi dan '
+      'tanggung jawab kepada seluruh pemangku kepentingan, Bank '
+      'Perekenomonian Rakyat (BPR) secara rutin mempublikasikan laporan '
+      'keuangan dan kinerja perusahaan serta laporan-laporan lainnya.',
       style: TextStyle(fontSize: 20),
     );
   }
@@ -132,6 +144,15 @@ class _ListLaporan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (data.isEmpty) {
+      return const Center(
+        child: Text(
+          "Belum ada laporan",
+          style: TextStyle(fontSize: 18, color: Colors.grey),
+        ),
+      );
+    }
+
     return ListView.builder(
       padding: const EdgeInsets.all(16),
       itemCount: data.length,
