@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:website/carouselresponsive.dart';
 import 'package:website/pages/footerresponsive.dart';
 import 'package:website/pages/listinformasiresponsive.dart';
 import 'package:website/pages/tablet/smki_tablet.dart';
@@ -19,7 +18,7 @@ class TabletHomePage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              CarouselResponsive(),
+              // CarouselResponsive(),
               TampilanUtamaResponsive(),
               ListInformasiResponsive(),
               SmkiTablet(),
